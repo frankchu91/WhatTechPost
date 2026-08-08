@@ -1,11 +1,3 @@
-<!--
-REVIEW NOTES (delete before publishing)
-- Verified by Claude on 2026-08-07: repo cloned, source install works on Python 3.13 (NOT 3.14), Agent subclass creation works, `pip install nooa` NOT yet on PyPI despite README. Version installed: 0.0.1.dev1.
-- NOT verified: benchmark numbers (82.2% SWE-bench, 86.8% CyberGym) — from NVIDIA's own paper. Phrased as claims in the text.
-- YOUR TAKE SLOT: the paragraph marked [PERSONAL TAKE] — add how this compares to how you build agents in your own products.
-- Cover image idea: screenshot of the InventoryAgent class in an editor.
--->
-
 ---
 title: "NVIDIA's NOOA turns an AI agent into one Python class — I installed it so you don't have to"
 published: false
