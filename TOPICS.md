@@ -2,7 +2,7 @@
 
 ## Candidates
 
-### Batch 2026-08-07 (first cycle)
+### Batch 2026-08-07 (first cycle) — all 5 drafted, see drafts/
 
 1. **NVIDIA NOOA — an AI agent is now one Python class** (open-sourced this week). Hands-on: install, build a small agent, compare with LangChain-style frameworks. Claims 82.2% SWE-bench Verified with a 253-line agent.
 2. **The AI API price war is on — what builders should actually run now** (GPT-5.6 Luna −80% on Jul 30; Sonnet 5 intro pricing $2/$10 ends Sep 1; Opus 5 at $5/$25). Build a real cost table for common agent workloads.
