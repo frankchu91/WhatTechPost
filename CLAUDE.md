@@ -28,6 +28,16 @@ Content mix: ~2/3 engineer's-lens news analysis (800–1500 words), ~1/3 deep te
 - `TOPICS.md` — candidate topic pool and used-topic log (check before picking to avoid repeats).
 - `VOICE.md` — voice guide and banned-phrase list. Follow it strictly.
 
+## Publishing via API
+
+`scripts/publish.py` posts a draft to dev.to (Forem API). Requires `DEVTO_API_KEY` in `.env` (gitignored) — generate at dev.to Settings → Extensions.
+
+- `python3 scripts/publish.py drafts/X.md` → creates a **draft** on dev.to (safe default)
+- `python3 scripts/publish.py drafts/X.md --publish` → publishes live
+- `--dry-run` → prints payload, no API call
+
+The script strips the leading REVIEW-NOTES comment and refuses to run while a `[PERSONAL TAKE]` placeholder remains — that gate is intentional, do not bypass it.
+
 ## dev.to Conventions
 
 - Tags: 3–4, always include high-traffic ones (#ai, #llm, #programming, #machinelearning as fits) + one precise niche tag.
