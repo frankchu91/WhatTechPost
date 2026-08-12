@@ -14,11 +14,14 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.request
 import urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 API_URL = "https://dev.to/api/articles"
+# dev.to's CDN blocks python's default User-Agent with 403 "Forbidden Bots".
+USER_AGENT = "WhatTechPost/1.0 (+https://github.com/frankchu91/WhatTechPost)"
 
 
 def load_api_key() -> str:
@@ -79,14 +82,22 @@ def main() -> None:
             "api-key": load_api_key(),
             "Content-Type": "application/json",
             "Accept": "application/vnd.forem.api-v1+json",
+            "User-Agent": USER_AGENT,
         },
         method="POST",
     )
-    try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.load(resp)
-    except urllib.error.HTTPError as e:
-        sys.exit(f"dev.to API error {e.code}: {e.read().decode()[:500]}")
+    data = None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req) as resp:
+                data = json.load(resp)
+            break
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 2:  # Forem allows ~1 write per 30s
+                print("rate limited (429), retrying in 35s...")
+                time.sleep(35)
+                continue
+            sys.exit(f"dev.to API error {e.code}: {e.read().decode()[:500]}")
 
     print(f"OK ({'published' if publish else 'draft'}): {data.get('url', '(no url)')}")
     print(f"id: {data.get('id')}")

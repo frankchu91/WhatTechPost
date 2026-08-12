@@ -1,59 +1,48 @@
 <!--
 REVIEW NOTES (delete before publishing)
-- Facts from coverage of OpenAI's Aug 1 announcement (sources in research/2026-08-07-topic-scan.md). NOT independently verified: the zero-`sorry` claim (would require checking out the GitHub repo and running lake build — doable if you want, and would strengthen the post; consider adding actual verification).
-- Math-community reaction is still developing — re-scan for expert commentary/refutations before publishing on ~Aug 16. If a proof gets challenged, that becomes the story.
-- YOUR TAKE SLOT: [PERSONAL TAKE].
+- Rewritten 2026-08-12 in the new voice (see VOICE.md).
+- Facts from coverage of OpenAI's Aug 1 announcement (sources in research/2026-08-07-topic-scan.md). Not independently verified: the zero-`sorry` claim. Cloning the repo and running the checker before publishing would strengthen the post — the text currently says honestly that we haven't.
+- Re-scan for math-community reactions before publishing; if a proof gets challenged, that becomes the story.
 -->
 
 ---
-title: "OpenAI's Astra solved 10 open math problems for $2,000 — but the real story is the zero-'sorry' Lean proofs"
+title: "The interesting part of the Astra math news isn't the math"
 published: false
-description: "Forget 'AI does math.' The important part for developers: the output ships with machine-checkable proof certificates. That pattern is coming for your code."
+description: "OpenAI's model solved ten open problems, but what stuck with me is how the results shipped: proof files a machine can check. That pattern applies to code too."
 tags: ai, programming, machinelearning, formalmethods
 ---
 
-On August 1, OpenAI announced that Astra — its next model, still unreleased — produced solutions to ten math and theoretical CS problems that had been open for a decade or more. The headline result constructs a non-sofic group, answering a question posed by Gromov in 1999. Estimated compute cost for all ten: about **$2,000** in tokens.
+When OpenAI announced earlier this month that its unreleased Astra model had solved ten open math problems, I almost scrolled past. "Big model does impressive thing" is background noise at this point, and I have no way to evaluate a result about non-sofic groups anyway. I'd guess most working developers are in the same position.
 
-Impressive. But "big model does hard math" is not the part that should interest you as a developer. The part that should interest you is *how the results shipped*: a 249-page manuscript **plus Lean 4 proof certificates on GitHub, Apache 2.0, with a `sorry` count of zero**.
+What made me stop was a detail further down: the results didn't ship as a paper and a press release. They shipped as a 249-page manuscript plus Lean 4 proof certificates, on GitHub, under Apache 2.0. And the repository's `sorry` count is zero.
 
-## Why zero `sorry` is the whole story
+That detail has been rattling around in my head for two weeks now, because I think it describes a workflow the rest of us are going to end up using — not for math, for ordinary code.
 
-If you haven't touched Lean: it's a proof assistant where `sorry` is the keyword for "trust me, I'll fill this in later" — the `TODO` of formal mathematics. A Lean development with zero `sorry` means every logical step of every proof is checked by the kernel, mechanically, no human trust required.
+## What zero `sorry` means
 
-Which changes what "AI claims" even means. Nobody has to believe OpenAI. You can clone the repo and run the checker yourself. The claim isn't "our model is smart" — it's "here is an artifact whose correctness a machine verifies, produced by a machine." Whether Astra "understands" von Neumann algebras is now a philosophy question; whether the proofs are valid is a `lake build` away.
+If you haven't used Lean: it's a proof assistant, and `sorry` is its keyword for "trust me, I'll prove this part later." It's the `TODO` of formal mathematics. A Lean development with no `sorry` anywhere means every logical step of every proof has been checked mechanically by the kernel. No referee's patience involved, no benefit of the doubt.
 
-Notably, mathematicians *are* independently examining the published proofs right now — and that's the system working as designed. The verification story doesn't require trusting the announcement; that's the point.
+Which changes what the announcement even is. Nobody has to believe OpenAI's claims about their model. You can clone the repository and run the checker on your own laptop, and mathematicians are doing exactly that right now. Whether Astra "understands" von Neumann algebras is a philosophy question. Whether the proofs are valid is a build command.
 
-## The pattern: generation is cheap, verification is the product
+I haven't run the checker myself yet — it's on my list, and I'll add an update here when I do. But the shape of the thing is what interests me, and the shape doesn't depend on my laptop.
 
-Here's the framing I keep coming back to: for years, the blocker on trusting LLM output has been that checking it costs as much as producing it yourself. Reviewing 500 lines of generated code is not obviously faster than writing them.
+## Generation is cheap now; verification is the product
 
-Formal certificates invert that. Generating the proof may have taken frontier-scale search; *checking* it takes minutes on a laptop, and the checker doesn't hallucinate. The expensive, fallible step and the cheap, reliable step have finally been separated.
+The blocker on trusting LLM output has always been that checking it costs about as much as doing the work yourself. Reviewing five hundred generated lines is not obviously faster than writing them. This is why "the model wrote it" still makes people nervous, and why it should.
 
-That's not a math-only trick. It's the same shape as:
+The Astra release inverts that arithmetic. OpenAI estimated the compute for finding all ten solutions at around $2,000 — which means the workflow was almost certainly a huge parallel search where the Lean kernel filtered out every wrong attempt, and most of the money went to discarded candidates. Generating a proof took frontier-scale search. Checking it takes minutes, and the checker doesn't hallucinate.
 
-- Generated code shipping with **property-based tests the model must pass** (and that you spot-check)
-- SQL migrations shipping with a **machine-checked equivalence proof** against the old schema
-- Dependency updates shipping with **behavioral diff reports** instead of changelogs you take on faith
-- An agent's PR shipping with a **typed contract** its changes provably satisfy
+The expensive, fallible step and the cheap, reliable step got separated. That's the whole trick, and it's not a math-specific trick. We already live by a weaker version of it: types, tests, CI. The news is that models are now good enough to satisfy much stricter checkers than the ones we currently point them at.
 
-The common move: don't trust the model — make the model produce an artifact that a dumb, deterministic checker can validate. We already live by this pattern (types, tests, CI). The news is that models are now good enough to satisfy *much* stricter checkers than we currently deploy.
+<!-- PERSONAL TAKE: a concrete place in your own stack where you could swap "review the output" for "check a certificate" — even a small one. -->
 
-## The $2,000 number cuts both ways
+## What I'm taking from it
 
-$2,000 for ten decade-old open problems is absurdly cheap — postdoc-hours on any one of these cost more. But note what it implies about workflow: this was almost certainly massive parallel search with the Lean kernel as the filter, most of the spend going to attempts that got discarded.
+Since reading about it I've been asking one question about every LLM-generated artifact in my own projects: what's the cheapest deterministic check that would catch a lie here? Sometimes the answer is a type signature. Sometimes it's a property-based test the generated code has to pass. It's rarely "a human reads it carefully," which is the check I was implicitly relying on before.
 
-That's the loop worth copying, at hobbyist scale: **generate many candidates, verify mechanically, keep survivors.** If your verification is trustworthy, model quality mostly changes your *bill*, not your correctness. I'd rather have a mediocre model and a great checker than the reverse.
+For what it's worth, none of the Clay Millennium Problems fell, and OpenAI's own framing acknowledges the ceiling. This isn't "mathematicians are done." It's narrower and more useful than that: generate many candidates, verify mechanically, keep the survivors — and the quality of your checker matters more than the quality of your generator.
 
-Worth saying: none of the Clay Millennium Problems fell. There's a ceiling, and OpenAI's own framing acknowledges it. This is "search plus verification is further along than you thought," not "mathematicians are done."
-
-[PERSONAL TAKE — where in your own stack could you swap "review the output" for "check a certificate"? One concrete place you'd apply generate-then-verify.]
-
-## What I'd do with this
-
-If you build with LLMs, steal the architecture: for any output that matters, ask *what's the cheapest deterministic checker that would catch a lie?* Sometimes it's a type system. Sometimes it's a test harness. Sometimes it's a whole proof assistant. The teams that get compounding value from models over the next few years will be the ones with the best checkers, not the best prompts.
-
-Is anyone here already running formal verification against generated code in anger? I want to hear what broke.
+If you're already running generated code against anything stricter than unit tests, I'd genuinely like to hear how it's going.
 
 ---
 

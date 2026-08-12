@@ -14,3 +14,8 @@
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-10 | NVIDIA NOOA hands-on | https://dev.to/frankchu/nvidias-nooa-turns-an-ai-agent-into-one-python-class-dm1 |
+| 2026-08-08 | AI API price war cost math | https://dev.to/frankchu/the-ai-api-price-war-in-actual-numbers-what-id-run-my-agents-on-this-month-2nno |
+| 2026-08-12 | Qwen3.8-Max open-weights checklist | https://dev.to/frankchu/qwen38-max-says-it-beats-gpt-56-and-fable-5-at-computer-use-heres-my-checklist-before-i-believe-48h0 |
+
+Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
