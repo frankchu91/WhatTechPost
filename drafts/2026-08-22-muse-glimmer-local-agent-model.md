@@ -1,6 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
-- All numbers in this post are from a real run on this machine, 2026-08-12: script scripts/bench_local_agents.py, raw results research/data/bench-2026-08-12.jsonl. The post links to github.com/frankchu91/local-agent-bench — that repo must exist and be PUBLIC before publishing (local copy ready at ~/repo/local-agent-bench, waiting for the GitHub repo to be created).
+- All numbers in this post are from a real run on this machine, 2026-08-12: script scripts/bench_local_agents.py, raw results research/data/bench-2026-08-12.jsonl. The post links to github.com/frankchu91/Muse-Glimmer-Test — pushed and live as of 2026-08-12; confirm it's Public.
 - think:false finding verified with two runs (cold 231s reload-included; warm 11s/60tok). Wording in the post matches what we saw.
 - n=5 per test is honest-but-small; the post says so explicitly. Don't let edits remove the limitations section.
 -->
@@ -26,7 +26,7 @@ Three tests, chosen because they're what agent loops are made of:
 2. **Constrained JSON** — extract fields into an exact four-key schema, five runs each, temperature 0. Checked for valid JSON and exact schema conformance. This is the single most common thing my local tooling asks a model to do.
 3. **Tool calling** — a two-step "use the tool, answer the question" task, three runs each.
 
-The script and raw results are in [frankchu91/local-agent-bench](https://github.com/frankchu91/local-agent-bench) if you want to rerun this on your own hardware — PRs with tables from other machines welcome.
+The script and raw results are in [frankchu91/Muse-Glimmer-Test](https://github.com/frankchu91/Muse-Glimmer-Test) if you want to rerun this on your own hardware — PRs with tables from other machines welcome.
 
 ## The numbers
 
