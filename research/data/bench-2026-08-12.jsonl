@@ -1,0 +1,27 @@
+{"model": "llama3.2:3b", "test": "speed", "prompt_tok_s": 702.9, "gen_tok_s": 56.7, "prompt_tokens": 1413, "wall_s": 2.8}
+{"model": "llama3.2:3b", "test": "json", "run": 0, "valid": true, "conform": true, "thinking_tokens_approx": 0, "wall_s": 0.7, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "llama3.2:3b", "test": "json", "run": 1, "valid": true, "conform": true, "thinking_tokens_approx": 0, "wall_s": 0.6, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "llama3.2:3b", "test": "json", "run": 2, "valid": true, "conform": true, "thinking_tokens_approx": 0, "wall_s": 0.6, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "llama3.2:3b", "test": "json", "run": 3, "valid": true, "conform": true, "thinking_tokens_approx": 0, "wall_s": 0.6, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "llama3.2:3b", "test": "json", "run": 4, "valid": true, "conform": true, "thinking_tokens_approx": 0, "wall_s": 0.6, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "llama3.2:3b", "test": "tools", "run": 0, "ok": true, "calls": 1}
+{"model": "llama3.2:3b", "test": "tools", "run": 1, "ok": true, "calls": 1}
+{"model": "llama3.2:3b", "test": "tools", "run": 2, "ok": true, "calls": 1}
+{"model": "qwen3:14b", "test": "speed", "prompt_tok_s": 161.8, "gen_tok_s": 14.6, "prompt_tokens": 1398, "wall_s": 24.1}
+{"model": "qwen3:14b", "test": "json", "run": 0, "valid": true, "conform": true, "thinking_tokens_approx": 227, "wall_s": 17.0, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "qwen3:14b", "test": "json", "run": 1, "valid": true, "conform": true, "thinking_tokens_approx": 227, "wall_s": 16.1, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "qwen3:14b", "test": "json", "run": 2, "valid": true, "conform": true, "thinking_tokens_approx": 227, "wall_s": 15.6, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "qwen3:14b", "test": "json", "run": 3, "valid": true, "conform": true, "thinking_tokens_approx": 227, "wall_s": 15.9, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "qwen3:14b", "test": "json", "run": 4, "valid": true, "conform": true, "thinking_tokens_approx": 227, "wall_s": 15.8, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "qwen3:14b", "test": "tools", "run": 0, "ok": true, "calls": 1}
+{"model": "qwen3:14b", "test": "tools", "run": 1, "ok": true, "calls": 1}
+{"model": "qwen3:14b", "test": "tools", "run": 2, "ok": true, "calls": 1}
+{"model": "muse-glimmer:30b-mlx", "test": "speed", "prompt_tok_s": 56.7, "gen_tok_s": 7.1, "prompt_tokens": 1443, "wall_s": 56.5}
+{"model": "muse-glimmer:30b-mlx", "test": "json", "run": 0, "valid": true, "conform": true, "thinking_tokens_approx": 324, "wall_s": 43.9, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "muse-glimmer:30b-mlx", "test": "json", "run": 1, "valid": true, "conform": true, "thinking_tokens_approx": 261, "wall_s": 37.1, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "muse-glimmer:30b-mlx", "test": "json", "run": 2, "valid": true, "conform": true, "thinking_tokens_approx": 286, "wall_s": 29.5, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "muse-glimmer:30b-mlx", "test": "json", "run": 3, "valid": true, "conform": true, "thinking_tokens_approx": 291, "wall_s": 32.1, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "muse-glimmer:30b-mlx", "test": "json", "run": 4, "valid": true, "conform": true, "thinking_tokens_approx": 260, "wall_s": 24.5, "content_head": "{\"name\": \"nooa-agents\", \"stars\": 4821, \"language\": \"Python\", \"archived\": false}"}
+{"model": "muse-glimmer:30b-mlx", "test": "tools", "run": 0, "ok": true, "calls": 1}
+{"model": "muse-glimmer:30b-mlx", "test": "tools", "run": 1, "ok": true, "calls": 1}
+{"model": "muse-glimmer:30b-mlx", "test": "tools", "run": 2, "ok": true, "calls": 1}

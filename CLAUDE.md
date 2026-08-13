@@ -18,7 +18,7 @@ Every post MUST have:
 
 If a draft can't meet the bar, skip the cycle rather than publish filler.
 
-Content mix: ~2/3 engineer's-lens news analysis (800–1500 words), ~1/3 deep technical breakdowns. Never plain news roundups.
+Content mix (revised 2026-08-12, "hardcore" pivot): **every post is built around something actually done** — an install, a build, a benchmark, a breakage, with real numbers/code/errors from this machine (M2 Pro, 32GB). News analysis is the frame, hands-on evidence is the substance. No pure commentary posts, never plain news roundups. Benchmark scripts live in `scripts/`, raw results in `research/data/` — both are part of the published artifact (link the repo).
 
 ## Structure
 
