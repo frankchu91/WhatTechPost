@@ -1,3 +1,7 @@
-.claude/settings.local.json
-.DS_Store
 .env
+.DS_Store
+.claude/settings.local.json
+
+# Unpublished work stays local. On publish: move md -> published/, PNGs -> assets/
+drafts/
+drafts-assets/
