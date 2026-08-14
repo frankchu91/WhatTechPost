@@ -45,7 +45,17 @@ Per-post visual budget (aim for all that apply):
 
 dev.to rich cards (pure markdown, zero hosting): `{% embed <news-url> %}` (link preview), `{% github owner/repo %}` (repo card), `{% link <your-devto-post-url> %}` (own-post card), `{% tweet %}`, `{% youtube %}`.
 
-Drafts record their assets in the REVIEW NOTES block (`COVER IMAGE: assets/...`, `INLINE CHART: assets/...`) and mark inline spots with a `[[CHART]]` line for the editor.
+### Repo layout & image hosting (WhatTechPost is public)
+
+- `drafts/` and `drafts-assets/` are **gitignored — local only.** Unpublished work never hits the public repo.
+- `published/` (markdown) and `assets/` (PNGs) are **tracked and pushed.** Only published posts' assets live in `assets/`.
+- Draft markdown already references final image URLs: `https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/<file>.png` (cover via `cover_image:` front matter, charts as inline `![]()`). The URL 404s until the asset is moved to `assets/` and pushed — which is exactly the publish step.
+
+**Publish flow (no manual image handling):**
+1. Move the post: `git mv`-style — markdown `drafts/ → published/`, its PNGs `drafts-assets/ → assets/`.
+2. `git add -A && commit && push` — now the raw URLs resolve.
+3. Publish the markdown (paste into dev.to editor OR API `body_markdown`). Cover and inline images load from the raw URLs automatically; nothing to upload or delete.
+4. Strip the REVIEW NOTES comment and fill any `[[PERSONAL TAKE]]` before publishing (the API script enforces the latter).
 
 ## Publishing via API
 
