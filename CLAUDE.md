@@ -18,7 +18,11 @@ Every post MUST have:
 
 If a draft can't meet the bar, skip the cycle rather than publish filler.
 
-Content mix (revised 2026-08-12, "hardcore" pivot): **every post is built around something actually done** — an install, a build, a benchmark, a breakage, with real numbers/code/errors from this machine (M2 Pro, 32GB). News analysis is the frame, hands-on evidence is the substance. No pure commentary posts, never plain news roundups. Benchmark scripts live in `scripts/`, raw results in `research/data/` — both are part of the published artifact (link the repo).
+Content mix (revised 2026-08-13): two kinds of posts, both welcome —
+1. **Hands-on** (the signature): install/build/benchmark/breakage with real numbers, code, and errors from this machine (M2 Pro, 32GB). Scripts in `scripts/`, raw results in `research/data/`, linked from the post.
+2. **Tech analysis**: news interpretation, explainers, trend pieces — no bench run required, but facts must be first-hand verified (read the model card / license / repo / discussion yourself, quote precisely) and the post needs an original stance.
+
+Hands-on when the story benefits from it, analysis when speed or the topic calls for it. Never plain news roundups, never uncritical relays of vendor claims.
 
 ## Structure
 
