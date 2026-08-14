@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-13-qwen.png
 - All model-card facts verified first-hand on HF today (2026-08-13): license tag "qwen3.8-max", text-only, 262K native context ("extensible up to 1,010,000"), 2.4T total / 95B active, thinking mandatory. Community quotes from HF discussion #13 (no official Qwen response as of fetch time).
 - Publish TODAY while the story is hot. Re-check discussions/13 for an official Qwen reply right before publishing — if one appeared, add a line.
 - The Aug 15 countdown for the 27B: if it ships, that's an immediate follow-up post.

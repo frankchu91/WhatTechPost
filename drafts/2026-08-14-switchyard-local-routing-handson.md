@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-14-switchyard.png
 - Every number and error in this post happened on this machine today (2026-08-13); raw notes in research/2026-08-13-switchyard-handson.md.
 - Publish after the Qwen follow-up. Suggested order: today Qwen, tomorrow this, Muse Glimmer bench after (or swap the last two).
 - The three install bugs may get fixed quickly — if the post goes out more than a few days late, re-verify `uv tool install "nemo-switchyard[cli]"` still fails without the extra --with packages.

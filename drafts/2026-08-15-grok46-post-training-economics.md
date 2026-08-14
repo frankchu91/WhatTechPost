@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-15-grok46.png
 - Facts verified via Artificial Analysis / VentureBeat / xAI announcement coverage (2026-08-13 search). Numbers: AA Index 61 (tied GPT-5.6 Sol Max), Terminal-Bench v3 26% vs 15.7% for 4.5, 500K context, $2/$6 (doubles past 200K prompt tokens), fast variant 2x price.
 - Re-check Artificial Analysis leaderboard the day of publishing — positions move.
 -->

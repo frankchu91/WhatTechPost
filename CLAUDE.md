@@ -32,6 +32,21 @@ Hands-on when the story benefits from it, analysis when speed or the topic calls
 - `TOPICS.md` — candidate topic pool and used-topic log (check before picking to avoid repeats).
 - `VOICE.md` — voice guide and banned-phrase list. Follow it strictly.
 
+## Visual assets (every post — no walls of text)
+
+Reference post the reader flagged as too dry: a long unbroken column of prose. Fix: give every post visual anchors. Assets are generated locally as PNGs into `assets/` and uploaded by the human in the dev.to editor (drag-drop → dev.to CDN; images are NOT hosted in the repo, so no public-repo dependency).
+
+Generators (HTML+CSS → headless Chrome screenshot, fully style-controlled):
+- `scripts/make_cover.py --kicker --title --meta --accent --out assets/<slug>.png` — branded 1000x420 cover. **Every post gets one.** Kicker signals type (HANDS-ON / TECH ANALYSIS / SECURITY / TREND / OPINION / PLATFORM). Accent = topic brand color (nvidia #76b900, aws #ff9900, cloudflare #f6821f, meta #0866ff, security #ef4444, default #38bdf8).
+- `scripts/make_barchart.py --spec chart.json --out assets/<slug>-chart.png` — grouped/single bar chart for any benchmark/price/perf numbers.
+
+Per-post visual budget (aim for all that apply):
+- 1 cover (always) · 1+ data chart or real screenshot when there are numbers · 2–3 dev.to rich cards · 1 pulled `> blockquote` from a primary source · code blocks with real config/output.
+
+dev.to rich cards (pure markdown, zero hosting): `{% embed <news-url> %}` (link preview), `{% github owner/repo %}` (repo card), `{% link <your-devto-post-url> %}` (own-post card), `{% tweet %}`, `{% youtube %}`.
+
+Drafts record their assets in the REVIEW NOTES block (`COVER IMAGE: assets/...`, `INLINE CHART: assets/...`) and mark inline spots with a `[[CHART]]` line for the editor.
+
 ## Publishing via API
 
 `scripts/publish.py` posts a draft to dev.to (Forem API). Requires `DEVTO_API_KEY` in `.env` (gitignored) — generate at dev.to Settings → Extensions.

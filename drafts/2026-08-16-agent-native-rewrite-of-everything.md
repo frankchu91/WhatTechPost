@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-16-agent-native.png
 - Synthesis piece tying together this cycle's stories (NOOA, Switchyard, Kitesurf, Muse Glimmer) — all already verified in their own drafts/research files. No new facts to check beyond confirming links.
 - This is the "zoom out" post; it earns its place only if the pattern is real. It links to several of your own posts — good for account cohesion. Confirm those posts are live before publishing (NOOA, Switchyard if published, Muse Glimmer if published).
 - Best published toward the end of the week so the posts it references are already up.

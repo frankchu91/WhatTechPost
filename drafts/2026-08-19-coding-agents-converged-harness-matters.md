@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-19-convergence.png
 - Rewritten 2026-08-12 in the new voice (see VOICE.md).
 - Leaderboard numbers as of early Aug 2026 (sources in research/2026-08-07-topic-scan.md). Re-check Terminal-Bench standings before publishing; if a new model blew past 90, adjust the numbers — the argument survives.
 - The two PERSONAL TAKE comments are where your real setup stories go; the post works without them but is much better with them.

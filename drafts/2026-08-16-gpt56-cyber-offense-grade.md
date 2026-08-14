@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-16-cyber.png
 - Facts from SecurityWeek/HackerNews/BleepingComputer/Forbes coverage of the Aug 10 announcement: built on Sol, Daybreak Blue/Red tiers, 95.0% vs 1.5% Advanced Cybersecurity Completion Rate (vendor-run), two V8 zero-days (CVE-2026-15903), identity-verified access with monitoring + legal attestations.
 - Sensitive topic: keep the framing analytical (access-model design), not operational. No exploit details exist in this post and none should be added.
 -->

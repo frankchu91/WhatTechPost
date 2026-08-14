@@ -1,7 +1,9 @@
 <!--
 REVIEW NOTES (delete before publishing)
 - Facts from TechCrunch/TheNextWeb/Cloudflare coverage (research/2026-08-12-topic-scan.md). Perf numbers are Cloudflare's own — shown in the chart as "Cloudflare's numbers".
-- VISUAL ASSETS: cover + chart generated in assets/. Image URLs below use the raw.githubusercontent pattern — they only resolve once the host repo is PUBLIC (see hosting decision). If hosting via dev.to editor upload instead, drag the PNGs from assets/ into the editor and replace the two URLs.
+- IMAGES (upload in the dev.to editor):
+    COVER  → assets/2026-08-14-kitesurf.png  (use the editor's "Add a cover image" button)
+    INLINE → assets/2026-08-14-kitesurf-chart.png  (drag into the editor at the [[CHART]] marker below, then delete the marker line)
 - Embeds: {% embed %} renders a link-preview card; {% link %} renders a rich card for your own dev.to post. The NOOA link is live; confirm before publishing.
 -->
 
@@ -10,7 +12,6 @@ title: "Cloudflare built a browser that throws away the screen"
 published: false
 description: "Kitesurf renders no pixels for humans: no tabs, no extensions, 7x less memory than Chromium. What a browser looks like when its only user is an agent."
 tags: ai, webdev, cloudflare, agents
-cover_image: https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/2026-08-14-kitesurf.png
 ---
 
 Every browser automation stack I've used — Puppeteer, Playwright, the agent tools built on them — shares one absurdity: it boots a full human browser, with its compositor and its 60fps scrolling and its extension machinery, so that a program can read some HTML. We've all just accepted that the tool for "fetch this page and find the price" is the same 300MB machine built for watching YouTube.
@@ -25,7 +26,7 @@ The interesting part is that it isn't Chromium with features torn off. It's asse
 
 The payoff, in Cloudflare's own measurements:
 
-![Kitesurf vs Chromium: ~3x less CPU on screenshots and extraction, ~7x less memory per page](https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/2026-08-14-kitesurf-chart.png)
+[[CHART]] <!-- drag assets/2026-08-14-kitesurf-chart.png into the editor here, then delete this line -->
 
 Roughly 4x the speed at a seventh of the memory. Their numbers, so apply the usual discount — but the direction is believable precisely because of everything they deleted. And the compatibility story is the pragmatic bit: Kitesurf speaks the Chrome DevTools Protocol, so Playwright and Puppeteer scripts point at it without a rewrite. That's the difference between an interesting research artifact and something you can try this afternoon.
 

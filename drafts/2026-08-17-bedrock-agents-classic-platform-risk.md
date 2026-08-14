@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-17-bedrock.png
 - Core fact: AWS renamed Bedrock Agents to "Bedrock Agents Classic" and closed it to new customers as of 2026-07-30 (from research/2026-08-12-topic-scan.md, AWS/agent-news coverage). VERIFY before publishing: what AWS is steering people to instead (AgentCore? a new Bedrock agents product?) — search "Bedrock Agents Classic replacement" that morning and name the successor correctly, or soften to "the newer service" if unclear.
 - Sunday slot — lower-key platform-strategy piece to balance the week. Fine as analysis.
 -->

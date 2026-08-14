@@ -1,5 +1,6 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-15-tldv.png
 - Facts from researcher bobdahacker's disclosure blog + Dark Reading/Netizen coverage: 181,874 meetings, 84,312 users, 35,003 domains, missing Firestore rule on the meetings collection, ~6-month unresolved disclosure. Verify current status before publishing (has tl;dv fixed it / responded since?) — search "tldv fix statement" that morning.
 - Tone care: this is about a real company's security failure — stick to the researcher's published facts, no speculation beyond them.
 -->

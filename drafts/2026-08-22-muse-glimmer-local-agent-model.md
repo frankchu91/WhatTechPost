@@ -1,5 +1,7 @@
 <!--
 REVIEW NOTES (delete before publishing)
+- COVER IMAGE (dev.to editor "Add a cover image"): assets/2026-08-22-muse-glimmer.png
+- INLINE CHART (drag into editor): assets/2026-08-22-muse-glimmer-chart.png
 - All numbers in this post are from a real run on this machine, 2026-08-12: script scripts/bench_local_agents.py, raw results research/data/bench-2026-08-12.jsonl. The post links to github.com/frankchu91/Muse-Glimmer-Test — pushed and live as of 2026-08-12; confirm it's Public.
 - think:false finding verified with two runs (cold 231s reload-included; warm 11s/60tok). Wording in the post matches what we saw.
 - n=5 per test is honest-but-small; the post says so explicitly. Don't let edits remove the limitations section.
