@@ -2,6 +2,20 @@
 
 ## Candidates
 
+### Batch 2026-08-13 (daily cadence, thru Sun 8/17 — 2 posts/day)
+
+Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
+- Qwen3.8 weights follow-up (analysis) — drafts/2026-08-13
+- Switchyard local routing (hands-on) — drafts/2026-08-14
+- Kitesurf agent browser (analysis) — drafts/2026-08-14
+- Grok 4.6 post-training economics (analysis) — drafts/2026-08-15
+- tl;dv leak / agent permissions (analysis) — drafts/2026-08-15
+- GPT-5.6-Cyber offense-grade access model (analysis) — drafts/2026-08-16
+- agent-native rewrite synthesis (analysis) — drafts/2026-08-16
+- Bedrock Agents Classic platform risk (analysis) — drafts/2026-08-17
+- Muse Glimmer bench (hands-on) — drafts/2026-08-22 (movable earlier)
+- coding-agents converged (opinion) — drafts/2026-08-19 (movable earlier)
+
 ### Batch 2026-08-12 (second cycle)
 
 1. **Meta Muse Glimmer 30B local agent model** → drafted (drafts/2026-08-22)
