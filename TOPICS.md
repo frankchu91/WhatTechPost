@@ -41,5 +41,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-13 | Astra Lean proofs / verifiable AI | https://dev.to/frankchu/the-interesting-part-of-the-astra-math-news-isnt-the-math-154a |
 | 2026-08-14 | Kitesurf agent browser | https://dev.to/frankchu/cloudflare-built-a-browser-that-throws-away-the-screen-2bpo |
 | 2026-08-14 | Switchyard local routing (hands-on) | https://dev.to/frankchu/nvidia-shipped-the-router-my-benchmark-was-asking-for-so-i-made-it-herd-my-ollama-models-2clf |
+| 2026-08-15 | Grok 4.6 post-training economics | https://dev.to/frankchu/grok-46-is-the-same-model-wearing-a-better-education-and-thats-the-story-58di |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
