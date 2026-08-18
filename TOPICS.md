@@ -43,5 +43,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-14 | Switchyard local routing (hands-on) | https://dev.to/frankchu/nvidia-shipped-the-router-my-benchmark-was-asking-for-so-i-made-it-herd-my-ollama-models-2clf |
 | 2026-08-15 | Grok 4.6 post-training economics | https://dev.to/frankchu/grok-46-is-the-same-model-wearing-a-better-education-and-thats-the-story-58di |
 | 2026-08-15 | tl;dv security / agent permissions | https://dev.to/frankchu/181874-meetings-one-missing-security-rule-the-tldv-leak-is-an-architecture-lesson-4e81 |
+| 2026-08-16 | GPT-5.6-Cyber access model | https://dev.to/frankchu/gpt-56-cyber-exists-and-the-interesting-part-is-the-gate-not-the-model-3968 |
+| 2026-08-16 | agent-native rewrite (synthesis) | https://dev.to/frankchu/everything-is-being-rebuilt-for-readers-who-never-look-at-it-2k74 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
