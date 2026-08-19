@@ -45,5 +45,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-15 | tl;dv security / agent permissions | https://dev.to/frankchu/181874-meetings-one-missing-security-rule-the-tldv-leak-is-an-architecture-lesson-4e81 |
 | 2026-08-16 | GPT-5.6-Cyber access model | https://dev.to/frankchu/gpt-56-cyber-exists-and-the-interesting-part-is-the-gate-not-the-model-3968 |
 | 2026-08-16 | agent-native rewrite (synthesis) | https://dev.to/frankchu/everything-is-being-rebuilt-for-readers-who-never-look-at-it-2k74 |
+| 2026-08-17 | Bedrock Agents Classic / platform risk | https://dev.to/frankchu/aws-just-put-classic-in-a-product-name-if-you-built-on-it-that-word-is-a-countdown-42p8 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
