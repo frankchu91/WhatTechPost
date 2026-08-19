@@ -2,6 +2,20 @@
 
 ## Candidates
 
+### Batch 2026-08-19 (daily 2/day thru weekend) — schedule
+
+| Day | Post 1 | Post 2 |
+|-----|--------|--------|
+| 8/19 | coding-agents converged (ready) | Stripe × OpenRouter $7B (new) |
+| 8/20 | GPT-5.6 Ultrafast / Cerebras (new) | Qwen3.8 weights follow-up (ready, in published/ but NOT live yet) |
+| 8/21 | Anthropic Model 2 withheld (new) | OWASP GenAI Top 10 2026 (new) |
+| 8/22 | EU AI Act Article 50 (new) | Z.ai GLM-5.3 (new) |
+| 8/23 (weekend) | Gemini 3.7 Flash (TODO draft) | "Week in AI" synthesis (TODO draft) |
+
+6 new drafts written this batch (all with covers; Stripe + Anthropic have data charts). Facts in research/2026-08-19-topic-scan.md.
+
+
+
 ### Batch 2026-08-13 (daily cadence, thru Sun 8/17 — 2 posts/day)
 
 Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
