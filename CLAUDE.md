@@ -14,7 +14,8 @@ Every post MUST have:
 1. One original opinion/stance — never a paraphrase of the official announcement.
 2. At least one piece of verified evidence: code actually run, numbers actually checked, or a primary source read end-to-end (notes in `research/`).
 3. First-person builder voice per `VOICE.md`.
-4. An AI-assistance disclosure line at the end (dev.to policy).
+
+(No AI-assistance disclosure line — removed 2026-08-19 by the author's decision. Do NOT add one to new posts. Already-published posts keep whatever they shipped with; don't retrofit.)
 
 If a draft can't meet the bar, skip the cycle rather than publish filler.
 

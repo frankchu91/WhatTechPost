@@ -44,6 +44,6 @@ After: "I went through our own usage after reading it, and ended up moving two o
 
 Drafts include `<!-- PERSONAL TAKE: ... -->` HTML comments marking where the author's own experience belongs. They render as nothing if forgotten, but fill them — that paragraph is usually the best one in the post.
 
-## Disclosure line (required, last line of every post)
+## No AI-disclosure line
 
-> *Research and drafting assisted by AI; all tests, opinions, and final edits are my own.*
+Do NOT append any "assisted by AI / written with AI" disclosure to posts (author's decision, 2026-08-19). End on the last real paragraph. Already-published posts that carry the old line are left as-is — don't retrofit.
