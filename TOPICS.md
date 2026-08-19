@@ -60,5 +60,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-16 | GPT-5.6-Cyber access model | https://dev.to/frankchu/gpt-56-cyber-exists-and-the-interesting-part-is-the-gate-not-the-model-3968 |
 | 2026-08-16 | agent-native rewrite (synthesis) | https://dev.to/frankchu/everything-is-being-rebuilt-for-readers-who-never-look-at-it-2k74 |
 | 2026-08-17 | Bedrock Agents Classic / platform risk | https://dev.to/frankchu/aws-just-put-classic-in-a-product-name-if-you-built-on-it-that-word-is-a-countdown-42p8 |
+| 2026-08-19 | coding-agents converged (harness) | https://dev.to/frankchu/i-went-looking-for-a-reason-to-switch-coding-agents-and-couldnt-find-one-27m1 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
