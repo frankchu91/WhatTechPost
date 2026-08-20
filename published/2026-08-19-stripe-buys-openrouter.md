@@ -17,6 +17,8 @@ Stripe just agreed to buy OpenRouter for more than $7 billion. If you route your
 
 The number alone is a story: $7B is roughly 5.4x the $1.3B valuation OpenRouter raised at in May. Three months. For a company whose product is, in one sentence, a single API that forwards your request to whichever of 400+ models you picked, for 8 million developers, moving something like 1.5 quadrillion tokens a year.
 
+![OpenRouter valuation jumped 5.4x in three months: $1.3B in May to $7B+ in August](https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/2026-08-19-stripe-chart.png)
+
 ## Why a payments company wants a model router
 
 The instinct is to ask what Stripe wants with AI infrastructure. I think that framing is backwards. OpenRouter isn't really AI infrastructure to Stripe — it's a *metering* point, and metering is Stripe's entire business.
