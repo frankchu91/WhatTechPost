@@ -16,6 +16,8 @@ cover_image: https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/asse
 
 Anthropic's August risk report has a detail that would be a launch announcement at most companies: an internal model, called Model 2, that outscores its current best public model. On Anthropic's CoBench it gets 62.8% against Mythos 5's 50.3% — not a rounding-error improvement, a real jump. And the report exists partly to say the company has no current plans to release it.
 
+![Anthropic's own CoBench: the unreleased Model 2 scores 62.8% versus the public Mythos 5's 50.3%](https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/2026-08-21-model2-chart.png)
+
 A frontier lab documenting a model it's choosing not to ship is unusual enough to be worth thinking about carefully, including the ways it's less dramatic than it sounds.
 
 ## The boring reason it's shelved
