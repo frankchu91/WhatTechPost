@@ -62,5 +62,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-17 | Bedrock Agents Classic / platform risk | https://dev.to/frankchu/aws-just-put-classic-in-a-product-name-if-you-built-on-it-that-word-is-a-countdown-42p8 |
 | 2026-08-19 | coding-agents converged (harness) | https://dev.to/frankchu/i-went-looking-for-a-reason-to-switch-coding-agents-and-couldnt-find-one-27m1 |
 | 2026-08-19 | Stripe x OpenRouter \$7B | https://dev.to/frankchu/stripe-just-bought-the-layer-that-decides-which-ai-model-answers-your-query-58fn |
+| 2026-08-20 | GPT-5.6 Ultrafast / Cerebras | https://dev.to/frankchu/750-tokens-a-second-changes-what-an-agent-can-do-not-just-how-fast-it-feels-4eh5 |
+| 2026-08-20 | Qwen3.8 weights follow-up (27B Apache) | https://dev.to/frankchu/the-qwen38-weights-are-out-last-weeks-checklist-did-its-job-ee4 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).

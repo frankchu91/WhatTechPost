@@ -30,7 +30,7 @@ And then the good ending: the 27B — the model I said was the actual story for 
 
 **"Read the license before the model card"** — this was the checklist's first item, and it turned out to be the right instinct. Custom license, exactly the outcome the undisclosed-license smell suggested.
 
-**"Ask which model you'd actually run"** — a 2.4T MoE was never something you or I would self-host, and that's now the release in hand while the runnable one slips. The open-weights headline and the usable artifact are different objects, and the gap between them is where launch marketing lives.
+**"Ask which model you'd actually run"** — a 2.4T MoE was never something you or I would self-host, and that was the release that landed first while the runnable one hadn't shown up yet. The open-weights headline and the usable artifact are different objects, and the gap between them is where launch marketing lives — a gap the 27B would go on to close, but only after the headline had already been written.
 
 **"Give it a week of other people's traffic"** — the community found the sharp edges within hours. The top discussion thread on the repo is blunt; one user wrote that "when a model is this strong in Vision-Language tasks and you simply strip that capability away, you throw away half its core value." Another pointed out the awkwardness of tagging the repo `qwen3.8-max` while the model card treats Max features like vision and 1M context as a cloud-only tier. There was no official response in that thread at the time.
 
