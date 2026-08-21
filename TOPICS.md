@@ -2,6 +2,19 @@
 
 ## Candidates
 
+### Cadence: 3 posts/day from 2026-08-21 (was 2/day)
+
+| Day | Post 1 | Post 2 | Post 3 |
+|-----|--------|--------|--------|
+| 8/21 | Anthropic Model 2 (ready) | OWASP Top 10 (ready) | Gemini 3.7 Flash (new) |
+| 8/22 | EU AI Act Art 50 (ready) | GLM-5.3 (ready) | Memmy shared memory (new) |
+| 8/23 | Replit Free Mode (new) | Pika Audio 20x cheaper (new) | "Week in AI" synthesis (new) |
+
+All 9 drafted with covers; Gemini has a pricing chart. Synthesis links Stripe/Ultrafast/Anthropic/OWASP (needs those live first). Facts: research/2026-08-19-topic-scan.md + verified 8/19-8/20.
+NOTE: Claude Opus 4.8 was checked and dropped — it shipped May 2026, not this week.
+
+
+
 ### Batch 2026-08-19 (daily 2/day thru weekend) — schedule
 
 | Day | Post 1 | Post 2 |
