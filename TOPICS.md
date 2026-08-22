@@ -78,5 +78,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-20 | GPT-5.6 Ultrafast / Cerebras | https://dev.to/frankchu/750-tokens-a-second-changes-what-an-agent-can-do-not-just-how-fast-it-feels-4eh5 |
 | 2026-08-20 | Qwen3.8 weights follow-up (27B Apache) | https://dev.to/frankchu/the-qwen38-weights-are-out-last-weeks-checklist-did-its-job-ee4 |
 | 2026-08-21 | Anthropic Model 2 withheld | https://dev.to/frankchu/anthropic-built-a-model-better-than-its-best-one-and-decided-not-to-ship-it-58nh |
+| 2026-08-21 | OWASP GenAI Top 10 2026 | https://dev.to/frankchu/the-owasp-llm-top-10-just-moved-excessive-agency-to-3-and-its-the-ranking-that-should-worry-you-3jh2 |
+| 2026-08-21 | Gemini 3.7 Flash | https://dev.to/frankchu/gemini-37-flash-halved-its-own-price-to-fuel-your-agents-until-december-86m |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
