@@ -85,5 +85,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-22 | Memmy shared agent memory | https://dev.to/frankchu/your-ai-agents-each-have-amnesia-memmy-tries-to-give-them-one-shared-memory-56he |
 | 2026-08-23 | Replit Free Mode | https://dev.to/frankchu/replits-free-mode-is-really-a-bet-that-cheap-models-make-agent-coding-sustainable-4kl8 |
 | 2026-08-23 | Pika Audio 20x cheaper | https://dev.to/frankchu/ai-audio-just-got-up-to-20x-cheaper-and-thats-the-part-builders-should-notice-1m5a |
+| 2026-08-23 | Week-in-AI synthesis | https://dev.to/frankchu/the-week-the-model-stopped-being-the-story-33n5 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
