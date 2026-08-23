@@ -82,5 +82,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-21 | Gemini 3.7 Flash | https://dev.to/frankchu/gemini-37-flash-halved-its-own-price-to-fuel-your-agents-until-december-86m |
 | 2026-08-22 | EU AI Act Article 50 | https://dev.to/frankchu/the-eu-ai-acts-disclosure-rules-are-live-now-and-they-apply-to-your-side-project-too-p40 |
 | 2026-08-22 | GLM-5.3 (weights held for safety) | https://dev.to/frankchu/glm-53-is-open-except-zai-is-holding-the-weights-back-and-the-reason-is-the-story-le8 |
+| 2026-08-22 | Memmy shared agent memory | https://dev.to/frankchu/your-ai-agents-each-have-amnesia-memmy-tries-to-give-them-one-shared-memory-56he |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
