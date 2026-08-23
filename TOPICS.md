@@ -98,5 +98,8 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-23 | Replit Free Mode | https://dev.to/frankchu/replits-free-mode-is-really-a-bet-that-cheap-models-make-agent-coding-sustainable-4kl8 |
 | 2026-08-23 | Pika Audio 20x cheaper | https://dev.to/frankchu/ai-audio-just-got-up-to-20x-cheaper-and-thats-the-part-builders-should-notice-1m5a |
 | 2026-08-23 | Week-in-AI synthesis | https://dev.to/frankchu/the-week-the-model-stopped-being-the-story-33n5 |
+| 2026-08-24 | Claude protein binders | https://dev.to/frankchu/claude-designed-working-proteins-for-14-of-15-targets-and-the-wet-lab-not-the-model-is-the-story-276k |
+| 2026-08-24 | Cognition \$40B / agent funding | https://dev.to/frankchu/a-coding-agent-startup-is-raising-at-40b-and-the-number-that-explains-it-isnt-the-valuation-cda |
+| 2026-08-24 | Reconstruction benchmark (limits) | https://dev.to/frankchu/frontier-models-score-3-15-at-recovering-research-ideas-from-a-bibliography-thats-worth-knowing-1nc0 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
