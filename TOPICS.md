@@ -2,6 +2,18 @@
 
 ## Candidates
 
+### Batch 2026-08-24 (3/day, 8/24-8/25) — drafted, ready
+
+| Day | Post 1 | Post 2 | Post 3 |
+|-----|--------|--------|--------|
+| 8/24 | Claude protein binders (14/15, lab-validated) | Cognition \$40B / agent funding surge | Reconstruction benchmark (LLM limits) |
+| 8/25 | Agent-harness rankings (harness = product) | Kimi K3 open-weight tops coding board | Meta Muse: read the 'modified' license |
+
+All 6 drafted with covers; 4 have data charts (protein hit-rate, Cognition valuation, Reconstruction single-vs-multi, Kimi Elo). Harness post cross-links the convergence piece. Facts: research/2026-08-24-topic-scan.md.
+Publish-day verify flags: Cognition "in talks" wording; Meta Spark 1.2 exact license terms; GLM-style open-weights checks on Kimi.
+
+
+
 ### Cadence: 3 posts/day from 2026-08-21 (was 2/day)
 
 | Day | Post 1 | Post 2 | Post 3 |
