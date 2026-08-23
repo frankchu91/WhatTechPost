@@ -81,5 +81,6 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-21 | OWASP GenAI Top 10 2026 | https://dev.to/frankchu/the-owasp-llm-top-10-just-moved-excessive-agency-to-3-and-its-the-ranking-that-should-worry-you-3jh2 |
 | 2026-08-21 | Gemini 3.7 Flash | https://dev.to/frankchu/gemini-37-flash-halved-its-own-price-to-fuel-your-agents-until-december-86m |
 | 2026-08-22 | EU AI Act Article 50 | https://dev.to/frankchu/the-eu-ai-acts-disclosure-rules-are-live-now-and-they-apply-to-your-side-project-too-p40 |
+| 2026-08-22 | GLM-5.3 (weights held for safety) | https://dev.to/frankchu/glm-53-is-open-except-zai-is-holding-the-weights-back-and-the-reason-is-the-story-le8 |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
