@@ -17,6 +17,21 @@ Every post MUST have:
 
 (No AI-assistance disclosure line — removed 2026-08-19 by the author's decision. Do NOT add one to new posts. Already-published posts keep whatever they shipped with; don't retrofit.)
 
+## AI-writing check (mandatory pre-publish step, added 2026-08-24)
+
+Every draft must pass the AI-writing scan before it publishes:
+
+```
+node scripts/aiscan.js drafts/<file>.md
+```
+
+It runs the installed `avoid-ai-writing` detector and prints a score + flagged tells with a PASS / REVIEW verdict (exit 1 = REVIEW).
+
+- **Score > 2 (REVIEW): fix and re-scan before publishing.** Don't publish a REVIEW draft.
+- **Always fix the real, consistent tells**, even on a PASS: em-dash overuse (keep to single digits per post) and bold overuse (≤2 bold phrases per post). These are our two chronic habits; the scan catches them every time.
+- **Use judgment on false positives** — it flags domain terms ("harness", "leverage-as-a-noun") and sometimes legitimate emphasis ("genuine"). Fix real ones; don't chase the number by mangling correct writing. The tool itself says: signal, not verdict.
+- Run it after writing/rewriting and again after any edit. A rewrite to lower the score must not introduce factual drift.
+
 If a draft can't meet the bar, skip the cycle rather than publish filler.
 
 Content mix (revised 2026-08-13): two kinds of posts, both welcome —

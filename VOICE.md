@@ -44,6 +44,15 @@ After: "I went through our own usage after reading it, and ended up moving two o
 
 Drafts include `<!-- PERSONAL TAKE: ... -->` HTML comments marking where the author's own experience belongs. They render as nothing if forgotten, but fill them — that paragraph is usually the best one in the post.
 
+## Hard rules from the aiscan detector (2026-08-24)
+
+The `avoid-ai-writing` scan surfaced two chronic tells in our own posts. Treat these as hard limits while drafting, not just at check time:
+
+- **Em-dashes: single digits per post.** This is our #1 tell — some drafts ran 20+. Prefer commas, periods, or a rewrite. If a sentence needs an em-dash, fine; a paragraph with three is a habit, not a choice.
+- **Bold: ≤2 phrases per post.** If everything's bold, nothing is. Lead with the key info in the sentence instead of bolding it.
+- Trim hollow intensifiers ("genuinely", "genuine", "real value", "truly") — keep them only where they carry real weight.
+- Run `node scripts/aiscan.js <draft>` before publishing (see CLAUDE.md). Fix the real flags; ignore domain-term false positives.
+
 ## No AI-disclosure line
 
 Do NOT append any "assisted by AI / written with AI" disclosure to posts (author's decision, 2026-08-19). End on the last real paragraph. Already-published posts that carry the old line are left as-is — don't retrofit.
