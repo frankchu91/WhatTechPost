@@ -23,7 +23,7 @@ There isn't one. Not a restrictive one — none. No license text, no release dat
 
 On a month where open weights keep reaching the actual frontier, a US lab promising to open its flagship is real news. But what that promise is worth depends entirely on a document that doesn't exist yet, and I think that blank line is worth a post on its own.
 
-{% link KIMI_POST_URL %}
+{% link https://dev.to/frankchu/an-open-weight-model-just-topped-a-real-coding-leaderboard-beating-the-closed-flagships-5dkb %}
 
 ## "Open weights" and "open license" are different claims
 

@@ -7,7 +7,7 @@
 | Day | Post 1 | Post 2 | Post 3 |
 |-----|--------|--------|--------|
 | 8/24 | Claude protein binders (14/15, lab-validated) | Cognition \$40B / agent funding surge | Reconstruction benchmark (LLM limits) |
-| 8/25 | Agent-harness rankings (harness = product) | Kimi K3 open-weight tops coding board | Meta Muse: read the 'modified' license |
+| 8/25 | Agent-harness rankings (harness = product) | Kimi K3 open-weight tops coding board | Meta Muse: Spark 1.2 license still unpublished |
 
 All 6 drafted with covers; 4 have data charts (protein hit-rate, Cognition valuation, Reconstruction single-vs-multi, Kimi Elo). Harness post cross-links the convergence piece. Facts: research/2026-08-24-topic-scan.md.
 Publish-day verify flags: Cognition "in talks" wording; Meta Spark 1.2 exact license terms; GLM-style open-weights checks on Kimi.
@@ -101,5 +101,8 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-24 | Claude protein binders | https://dev.to/frankchu/claude-designed-working-proteins-for-14-of-15-targets-and-the-wet-lab-not-the-model-is-the-story-276k |
 | 2026-08-24 | Cognition \$40B / agent funding | https://dev.to/frankchu/a-coding-agent-startup-is-raising-at-40b-and-the-number-that-explains-it-isnt-the-valuation-cda |
 | 2026-08-24 | Reconstruction benchmark (limits) | https://dev.to/frankchu/frontier-models-score-3-15-at-recovering-research-ideas-from-a-bibliography-thats-worth-knowing-1nc0 |
+| 2026-08-25 | Agent-harness rankings | https://dev.to/frankchu/people-are-ranking-agent-harnesses-now-not-just-models-thats-the-whole-shift-in-one-headline-2p20 |
+| 2026-08-25 | Kimi K3 open-weight tops frontend board | https://dev.to/frankchu/an-open-weight-model-just-topped-a-real-coding-leaderboard-beating-the-closed-flagships-5dkb |
+| 2026-08-25 | Meta Muse Spark 1.2 license unpublished | https://dev.to/frankchu/meta-says-itll-open-the-weights-for-its-flagship-the-license-line-is-still-blank-4fnl |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
