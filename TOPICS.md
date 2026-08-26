@@ -2,6 +2,15 @@
 
 ## Candidates
 
+### 8/25 REDO — 3 new topics (harness/Kimi live; Meta shelved; user chose fresh)
+All three written to the new aiscan standard and PASS (scores 0-1, vs old drafts' 3-4):
+- MCP roadmap: tool-calling -> production (identity, delegation, stateless transport, progressive discovery)
+- NVIDIA Groq 3 LPX: $20B acqui-hire, inference gets its own silicon
+- Thomson Reuters LLM: $450K final run, the moat is proprietary data (stat card)
+Facts: research/2026-08-25-topic-scan.md. Ready to publish.
+
+
+
 ### Batch 2026-08-24 (3/day, 8/24-8/25) — drafted, ready
 
 | Day | Post 1 | Post 2 | Post 3 |
