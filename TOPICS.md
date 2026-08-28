@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-25 | MCP roadmap | https://dev.to/frankchu/the-mcp-roadmap-just-moved-from-tool-calling-to-running-agents-in-production-m86 |
+| 2026-08-25 | NVIDIA Groq 3 LPX | https://dev.to/frankchu/nvidia-bought-the-company-that-was-beating-it-at-inference-and-just-shipped-the-chip-96n |
+| 2026-08-25 | Thomson data-moat (\$450K) | https://dev.to/frankchu/a-legal-frontier-models-final-training-run-cost-450000-the-moat-was-the-data-not-the-compute-5f9a |
 | 2026-08-10 | NVIDIA NOOA hands-on | https://dev.to/frankchu/nvidias-nooa-turns-an-ai-agent-into-one-python-class-dm1 |
 | 2026-08-08 | AI API price war cost math | https://dev.to/frankchu/the-ai-api-price-war-in-actual-numbers-what-id-run-my-agents-on-this-month-2nno |
 | 2026-08-12 | Qwen3.8-Max open-weights checklist | https://dev.to/frankchu/qwen38-max-says-it-beats-gpt-56-and-fable-5-at-computer-use-heres-my-checklist-before-i-believe-48h0 |
