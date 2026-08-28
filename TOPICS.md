@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-27 | Block Buzz agent identity | https://dev.to/frankchu/jack-dorseys-buzz-gives-every-ai-agent-its-own-login-thats-the-idea-worth-copying-4g23 |
+| 2026-08-27 | Microsoft Agent Lightning | https://dev.to/frankchu/microsofts-agent-lightning-lets-you-train-the-agent-you-already-built-without-rewriting-it-gpp |
+| 2026-08-27 | DiffusionGemma text diffusion | https://dev.to/frankchu/the-ai-model-that-writes-text-in-parallel-blocks-instead-of-one-token-at-a-time-1n6p |
 | 2026-08-25 | MCP roadmap | https://dev.to/frankchu/the-mcp-roadmap-just-moved-from-tool-calling-to-running-agents-in-production-m86 |
 | 2026-08-25 | NVIDIA Groq 3 LPX | https://dev.to/frankchu/nvidia-bought-the-company-that-was-beating-it-at-inference-and-just-shipped-the-chip-96n |
 | 2026-08-25 | Thomson data-moat (\$450K) | https://dev.to/frankchu/a-legal-frontier-models-final-training-run-cost-450000-the-moat-was-the-data-not-the-compute-5f9a |
