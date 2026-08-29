@@ -61,21 +61,28 @@ Per-post visual budget (aim for all that apply):
 
 dev.to rich cards (pure markdown, zero hosting): `{% embed <news-url> %}` (link preview), `{% github owner/repo %}` (repo card), `{% link <your-devto-post-url> %}` (own-post card), `{% tweet %}`, `{% youtube %}`.
 
-### Repo layout & image hosting (WhatTechPost is public) — colocated structure (2026-08-29)
+### Repo layout & image hosting (WhatTechPost is public) — one folder per post (2026-08-29)
 
-**Each post's markdown and its images live in the same folder.**
+**Each post gets its OWN folder holding its markdown + its images.**
 
-- `drafts/` — **gitignored, local only.** Holds each unpublished post's `.md` AND its PNG images together. Unpublished work never hits the public repo.
-- `published/` — **tracked and pushed.** Holds each published post's `.md` AND its PNG images together. This is the public raw-URL source going forward.
-- `assets/` — **FROZEN / legacy.** Holds images for posts published before 2026-08-29. Those live posts hot-link `…/main/assets/<file>.png`, so do NOT move, rename, or delete anything here or their inline images break. New posts do not use it.
-- New-post image URLs: `https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/<file>.png` (cover via `cover_image:` front matter, charts as inline `![]()`). The URL 404s until the whole post folder set is moved to `published/` and pushed — which is exactly the publish step.
-- Generate a draft's images straight into `drafts/`: `make_cover.py --out drafts/<slug>.png`, `make_barchart.py --out drafts/<slug>-chart.png`.
+```
+drafts/2026-08-29-i-built-coding-agent-router/   ← one post = one folder
+   index.md         ← the article (always index.md)
+   cover.png        ← cover image
+   receipt.png      ← any inline charts/cards, short names
+```
+
+- `drafts/<slug>/` — **gitignored, local only.** One folder per unpublished post: `index.md` + its PNGs. Unpublished work never hits the public repo.
+- `published/<slug>/` — **tracked and pushed.** Same folder moved here on publish; the public raw-URL source going forward.
+- `assets/` — **FROZEN / legacy.** Flat images for posts published before 2026-08-29. Those live posts hot-link `…/main/assets/<file>.png`, so do NOT move, rename, or delete anything here or their inline images break. New posts do not use it. (Pre-8/29 published markdown also stays flat in `published/*.md`; only new posts use the per-folder layout.)
+- New-post image URLs: `https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/<slug>/<img>.png` (cover via `cover_image:` front matter, charts as inline `![]()`). 404s until the folder is moved to `published/` and pushed — which is exactly the publish step.
+- Generate a draft's images straight into its folder: `make_cover.py --out drafts/<slug>/cover.png`, `make_barchart.py --out drafts/<slug>/<name>-chart.png`.
 
 **Publish flow (no manual image handling):**
-1. Move the post's whole set: markdown + its PNGs `drafts/ → published/`.
-2. `git add -A && commit && push` — now the `…/main/published/<file>.png` raw URLs resolve.
-3. Publish via API `body_markdown`. Cover and inline images load from the raw URLs automatically; nothing to upload or delete.
-4. Strip the REVIEW NOTES comment and fill any `[[PERSONAL TAKE]]` before publishing (the API script enforces the latter). Run `node scripts/aiscan.js` and reach PASS first.
+1. Move the whole folder: `drafts/<slug>/ → published/<slug>/`.
+2. `git add -A && commit && push` — now the `…/main/published/<slug>/<img>.png` raw URLs resolve.
+3. Publish via API: `python3 scripts/publish.py published/<slug>/index.md --publish`. Cover and inline images load from the raw URLs automatically.
+4. Before publishing: strip REVIEW NOTES, fill any `[[PERSONAL TAKE]]`, and `node scripts/aiscan.js published/<slug>/index.md` must reach PASS.
 
 ## Publishing via API
 
