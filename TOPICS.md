@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-28 | AI coding adoption 90%/68% | https://dev.to/frankchu/90-of-developers-now-use-ai-coding-agents-weekly-the-interesting-question-isnt-whether-its-1je1 |
+| 2026-08-28 | robotics funding (bits to atoms) | https://dev.to/frankchu/the-ai-money-is-moving-from-bits-to-atoms-and-robotics-is-where-the-mega-rounds-went-1313 |
+| 2026-08-28 | HF open robot >\$1M | https://dev.to/frankchu/while-vcs-pour-billions-into-humanoids-hugging-faces-tiny-open-source-robot-quietly-passed-1m-in-2p88 |
 | 2026-08-27 | Block Buzz agent identity | https://dev.to/frankchu/jack-dorseys-buzz-gives-every-ai-agent-its-own-login-thats-the-idea-worth-copying-4g23 |
 | 2026-08-27 | Microsoft Agent Lightning | https://dev.to/frankchu/microsofts-agent-lightning-lets-you-train-the-agent-you-already-built-without-rewriting-it-gpp |
 | 2026-08-27 | DiffusionGemma text diffusion | https://dev.to/frankchu/the-ai-model-that-writes-text-in-parallel-blocks-instead-of-one-token-at-a-time-1n6p |
