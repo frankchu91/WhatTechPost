@@ -50,28 +50,32 @@ Hands-on when the story benefits from it, analysis when speed or the topic calls
 
 ## Visual assets (every post — no walls of text)
 
-Reference post the reader flagged as too dry: a long unbroken column of prose. Fix: give every post visual anchors. Assets are generated locally as PNGs into `assets/` and uploaded by the human in the dev.to editor (drag-drop → dev.to CDN; images are NOT hosted in the repo, so no public-repo dependency).
+Reference post the reader flagged as too dry: a long unbroken column of prose. Fix: give every post visual anchors. Images are generated as PNGs into the post's `drafts/` folder (colocated with its markdown) and referenced by raw URL; on publish the whole folder set moves to `published/` and is pushed (see Repo layout below).
 
 Generators (HTML+CSS → headless Chrome screenshot, fully style-controlled):
-- `scripts/make_cover.py --kicker --title --meta --accent --out assets/<slug>.png` — branded 1000x420 cover. **Every post gets one.** Kicker signals type (HANDS-ON / TECH ANALYSIS / SECURITY / TREND / OPINION / PLATFORM). Accent = topic brand color (nvidia #76b900, aws #ff9900, cloudflare #f6821f, meta #0866ff, security #ef4444, default #38bdf8).
-- `scripts/make_barchart.py --spec chart.json --out assets/<slug>-chart.png` — grouped/single bar chart for any benchmark/price/perf numbers.
+- `scripts/make_cover.py --kicker --title --meta --accent --out drafts/<slug>.png` — branded 1000x420 cover. **Every post gets one.** Kicker signals type (HANDS-ON / TECH ANALYSIS / SECURITY / TREND / OPINION / PLATFORM). Accent = topic brand color (nvidia #76b900, aws #ff9900, cloudflare #f6821f, meta #0866ff, security #ef4444, default #38bdf8).
+- `scripts/make_barchart.py --spec chart.json --out drafts/<slug>-chart.png` — grouped/single bar chart for any benchmark/price/perf numbers.
 
 Per-post visual budget (aim for all that apply):
 - 1 cover (always) · 1+ data chart or real screenshot when there are numbers · 2–3 dev.to rich cards · 1 pulled `> blockquote` from a primary source · code blocks with real config/output.
 
 dev.to rich cards (pure markdown, zero hosting): `{% embed <news-url> %}` (link preview), `{% github owner/repo %}` (repo card), `{% link <your-devto-post-url> %}` (own-post card), `{% tweet %}`, `{% youtube %}`.
 
-### Repo layout & image hosting (WhatTechPost is public)
+### Repo layout & image hosting (WhatTechPost is public) — colocated structure (2026-08-29)
 
-- `drafts/` and `drafts-assets/` are **gitignored — local only.** Unpublished work never hits the public repo.
-- `published/` (markdown) and `assets/` (PNGs) are **tracked and pushed.** Only published posts' assets live in `assets/`.
-- Draft markdown already references final image URLs: `https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/assets/<file>.png` (cover via `cover_image:` front matter, charts as inline `![]()`). The URL 404s until the asset is moved to `assets/` and pushed — which is exactly the publish step.
+**Each post's markdown and its images live in the same folder.**
+
+- `drafts/` — **gitignored, local only.** Holds each unpublished post's `.md` AND its PNG images together. Unpublished work never hits the public repo.
+- `published/` — **tracked and pushed.** Holds each published post's `.md` AND its PNG images together. This is the public raw-URL source going forward.
+- `assets/` — **FROZEN / legacy.** Holds images for posts published before 2026-08-29. Those live posts hot-link `…/main/assets/<file>.png`, so do NOT move, rename, or delete anything here or their inline images break. New posts do not use it.
+- New-post image URLs: `https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/<file>.png` (cover via `cover_image:` front matter, charts as inline `![]()`). The URL 404s until the whole post folder set is moved to `published/` and pushed — which is exactly the publish step.
+- Generate a draft's images straight into `drafts/`: `make_cover.py --out drafts/<slug>.png`, `make_barchart.py --out drafts/<slug>-chart.png`.
 
 **Publish flow (no manual image handling):**
-1. Move the post: `git mv`-style — markdown `drafts/ → published/`, its PNGs `drafts-assets/ → assets/`.
-2. `git add -A && commit && push` — now the raw URLs resolve.
-3. Publish the markdown (paste into dev.to editor OR API `body_markdown`). Cover and inline images load from the raw URLs automatically; nothing to upload or delete.
-4. Strip the REVIEW NOTES comment and fill any `[[PERSONAL TAKE]]` before publishing (the API script enforces the latter).
+1. Move the post's whole set: markdown + its PNGs `drafts/ → published/`.
+2. `git add -A && commit && push` — now the `…/main/published/<file>.png` raw URLs resolve.
+3. Publish via API `body_markdown`. Cover and inline images load from the raw URLs automatically; nothing to upload or delete.
+4. Strip the REVIEW NOTES comment and fill any `[[PERSONAL TAKE]]` before publishing (the API script enforces the latter). Run `node scripts/aiscan.js` and reach PASS first.
 
 ## Publishing via API
 
