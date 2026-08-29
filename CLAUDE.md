@@ -2,6 +2,10 @@
 
 Personal tech-brand blog on dev.to. Author persona: **indie builder** — a developer actively building AI products, writing about the latest AI news from a "what does this mean for builders" perspective.
 
+## HARD CONSTRAINT — no Meta content (author works at Meta)
+
+**The author works at Meta.** Never write, draft, or publish anything about Meta or its products/models — Muse Glimmer, Muse Spark, Muse Code, Llama, Superintelligence Labs, Meta leadership, Meta research. This includes passing mentions and comparisons ("Meta's Muse Glimmer", "a Llama-shaped license"). When a news roundup or synthesis would naturally cite Meta, drop the Meta example and use a non-Meta one instead. No exceptions — this is an employer conflict-of-interest / compliance rule, not a stylistic one.
+
 ## Cadence & Workflow
 
 - One post every 3 days (scheduled pipeline drafts it; human reviews and publishes manually).
