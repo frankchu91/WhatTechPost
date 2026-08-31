@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-30 | Two-agent coding stack (frontier + free open) | https://dev.to/frankchu/the-2026-coding-setup-isnt-one-agent-its-two-a-frontier-driver-and-a-free-open-one-26a |
+| 2026-08-30 | DeepSeek V4-Pro raised prices | https://dev.to/frankchu/deepseek-raised-its-prices-in-the-middle-of-a-price-war-thats-the-part-worth-noticing-2o49 |
+| 2026-08-30 | OpenHands autonomous coding agent | https://dev.to/frankchu/openhands-takes-a-github-issue-and-hands-back-a-pull-request-unsupervised-and-its-open-source-p81 |
 | 2026-08-30 | Andrew Ng: AI terrible for learning | https://dev.to/frankchu/andrew-ng-says-ai-is-terrible-for-learning-for-developers-thats-the-warning-worth-hearing-5ako |
 | 2026-08-29 | Seed 2.1 video-native | https://dev.to/frankchu/ai-can-now-watch-an-hour-of-video-and-reason-about-what-happened-in-it-8m0 |
 | 2026-08-29 | GLM-5.3-Flash was Ox Alpha | https://dev.to/frankchu/the-mystery-ox-alpha-model-everyone-loved-on-openrouter-was-an-open-weights-model-at-a-tenth-of-1c6j |

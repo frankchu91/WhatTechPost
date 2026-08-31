@@ -63,3 +63,7 @@ Each tier is just a model, a base URL, and a key, so any Anthropic-compatible en
 I keep coming back to one theme across everything I write, which is that the model is the commodity and the value is in the harness around it. This is me putting my own code where my posts are. The router does not make any model smarter. It just spends the expensive one only when the expensive one earns it, and it does that without breaking the cache that makes the whole thing affordable in the first place. It is open source, it runs with `npx coding-agent-router claude`, and I would like it to be wrong in ways I have not thought of yet.
 
 If you try it, the thing I most want to hear is where the classifier misjudged a task, because that file is the whole argument and it gets better the more real sessions disagree with it. The repo is [here](https://github.com/frankchu91/coding-agent-router).
+
+There is a lower-tech version of this same idea that skips the proxy entirely: run two agents, a frontier driver and a free open one, and route between them by hand. I wrote that up separately.
+
+{% link https://dev.to/frankchu/the-2026-coding-setup-isnt-one-agent-its-two-a-frontier-driver-and-a-free-open-one-26a %}

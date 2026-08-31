@@ -44,6 +44,10 @@ I didn't switch. Not out of loyalty — the models are close enough that switchi
 
 If you've seen the opposite — a task where swapping the model alone, same setup, made the real difference — I'd honestly like to hear about it. That's the counterexample my thinking needs.
 
+For a concrete sign of that convergence, an open-source agent now takes a GitHub issue and hands back a pull request with no supervision, and holds its own against the closed options.
+
+{% link https://dev.to/frankchu/openhands-takes-a-github-issue-and-hands-back-a-pull-request-unsupervised-and-its-open-source-p81 %}
+
 ---
 
 *Research and drafting assisted by AI; all tests, opinions, and final edits are my own.*

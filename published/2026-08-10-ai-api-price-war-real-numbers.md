@@ -58,8 +58,6 @@ The mistake is picking one model. The move is routing by task risk:
 - **The agent's main loop** (code edits, multi-step tool use): Sonnet 5 or Terra tier. This is where quality drops actually cost you time.
 - **Escalation only** (gnarly debugging, architecture decisions, final review): Sol or Opus 5, invoked by the cheaper model when it's stuck, not by default.
 
-[PERSONAL TAKE — what you route where in your own product, and one surprising thing your bill taught you.]
-
 ## The catch nobody prints
 
 An 80% price cut on last quarter's mid-tier is also a signal about where that model sits in the lineup now. Vendors cut prices on tiers they've already beaten internally. You're not getting a discount on the frontier; you're getting the previous frontier at clearance. That's still a great deal — just don't confuse it with generosity.
@@ -67,6 +65,10 @@ An 80% price cut on last quarter's mid-tier is also a signal about where that mo
 And mind the reversion dates. Sonnet 5's intro pricing expiring Sep 1 is a 50% jump on both sides of the meter. If your margins depend on intro pricing, you don't have a margin — you have a countdown.
 
 What's your actual monthly spend and split? Genuinely curious what routing setups people have landed on — drop your numbers in the comments.
+
+Update: the race to zero I describe here did not hold. DeepSeek went the other way and raised its prices, which turns out to be the more interesting move.
+
+{% link https://dev.to/frankchu/deepseek-raised-its-prices-in-the-middle-of-a-price-war-thats-the-part-worth-noticing-2o49 %}
 
 ---
 
