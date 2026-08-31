@@ -14,7 +14,7 @@ tags: ai, machinelearning, video, webdev
 cover_image: https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/2026-08-29-seed-21-video-native/cover.png
 ---
 
-Most AI progress this year was about text and code, so a quieter shift got less attention than it deserves: video is turning into a first-class input. ByteDance's Seed 2.1 can process hour-long video with what its makers describe as accurate temporal reasoning, including understanding of actions and physical motion. It is not alone. Several of this month's models added native video input alongside long context. The capability I want to talk about is the one Seed 2.1 puts a number on, which is length. An hour, reasoned about over time, not a clip.
+An AI can now watch an hour of video and reason about what happened in it, in order, over time. ByteDance's Seed 2.1 processes hour-long video with what its makers describe as accurate temporal reasoning, including understanding of actions and physical motion. Most AI progress this year was about text and code, so this quieter shift got less attention than it deserves, but video is turning into a first-class input, and Seed 2.1 is the one that puts a number on it. An hour, reasoned about over time, not a clip. It is not alone either. Several of this month's models added native video input alongside long context.
 
 ## Why "an hour, with temporal reasoning" is the real jump
 
