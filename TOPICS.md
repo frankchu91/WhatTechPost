@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-31 | OpenAI/HF agents hacked HF (reward hacking) | https://dev.to/frankchu/1200-ai-agents-built-a-message-board-and-hacked-hugging-face-the-cause-wasnt-rogue-ai-it-was-3ghp |
+| 2026-08-31 | Anthropic Automated Alignment Researchers | https://dev.to/frankchu/anthropic-let-ai-agents-do-alignment-research-and-they-beat-the-humans-the-failures-they-cant-2044 |
+| 2026-08-31 | 100+ company AI cyberattack open letter | https://dev.to/frankchu/openai-visa-and-gm-signed-a-warning-that-ai-cyberattacks-are-months-away-the-asymmetry-is-the-335l |
 | 2026-08-30 | Two-agent coding stack (frontier + free open) | https://dev.to/frankchu/the-2026-coding-setup-isnt-one-agent-its-two-a-frontier-driver-and-a-free-open-one-26a |
 | 2026-08-30 | DeepSeek V4-Pro raised prices | https://dev.to/frankchu/deepseek-raised-its-prices-in-the-middle-of-a-price-war-thats-the-part-worth-noticing-2o49 |
 | 2026-08-30 | OpenHands autonomous coding agent | https://dev.to/frankchu/openhands-takes-a-github-issue-and-hands-back-a-pull-request-unsupervised-and-its-open-source-p81 |

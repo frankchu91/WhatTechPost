@@ -42,4 +42,8 @@ That's a good map for deciding what to actually delegate. Hand a model the work 
 
 Wiring models into a multi-agent tournament to claw from 15% to 42% is also just a good technique to have in your pocket for hard generative problems — even if, this week, the headline is how far 42% still is from done.
 
+This ties to something Anthropic shipped this week: AI agents that automate research where the target is measurable, and go quiet exactly where it isn't. The same line between "the answer exists and can be checked" and "the answer has to be invented," drawn in a different place.
+
+{% link https://dev.to/frankchu/anthropic-let-ai-agents-do-alignment-research-and-they-beat-the-humans-the-failures-they-cant-2044 %}
+
 If you've used a multi-agent setup to beat what a single model could do on a genuinely generative task, I'd like to hear how big the lift was — the honest numbers are harder to find than the hype.

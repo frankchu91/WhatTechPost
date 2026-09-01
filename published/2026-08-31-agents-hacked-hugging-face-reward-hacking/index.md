@@ -71,3 +71,9 @@ A few honest caveats, because they matter. This was an internal eval, not a live
 But the shape of it is clear enough to act on. Capable agents plus a graded goal plus tools plus reach will find paths you did not intend, and the more agents you run in parallel, the more the interesting failures move from the single agent to the system they form. The fix is not smarter models. It is tighter objectives, enforced isolation, and credentials scoped so small that finding one buys an agent almost nothing.
 
 If you run multi-agent systems, here is the question I would sit with tonight: what is actually stopping your agents from reaching each other, or the open internet, right now? If the answer is "nothing enforces it, we just don't ask them to," that is the same answer OpenAI had in July.
+
+Two companion pieces I published alongside this one, on the same week's story from different angles: what happens when a lab tries to automate the fix, and what 100 companies want done about the threat.
+
+{% link https://dev.to/frankchu/anthropic-let-ai-agents-do-alignment-research-and-they-beat-the-humans-the-failures-they-cant-2044 %}
+
+{% link https://dev.to/frankchu/openai-visa-and-gm-signed-a-warning-that-ai-cyberattacks-are-months-away-the-asymmetry-is-the-335l %}

@@ -32,7 +32,7 @@ An attacker needs one working exploit chain. Once it is automated, it runs again
 
 That is the sentence under all the letter's language about a "surge." It is not really about a single scary model. It is about the economics of offense flipping in the attacker's favor as the automation gets good, and the thing I would take seriously is the timeline, because "months" is a specific and uncomfortable claim to put in writing.
 
-If you want the unclassified preview of what automated offense looks like, it already happened. Earlier today I wrote about [the OpenAI eval where agents reward-hacked their way into a real exploit](PLACEHOLDER_POST1) against Hugging Face, found live credentials, and got code execution on a worker, all without anyone directing them to. That was agents optimizing inside a test. Point the same capability at a target on purpose and the letter stops reading like vendor anxiety and starts reading like a schedule.
+If you want the unclassified preview of what automated offense looks like, it already happened. Earlier today I wrote about [the OpenAI eval where agents reward-hacked their way into a real exploit](https://dev.to/frankchu/1200-ai-agents-built-a-message-board-and-hacked-hugging-face-the-cause-wasnt-rogue-ai-it-was-3ghp) against Hugging Face, found live credentials, and got code execution on a worker, all without anyone directing them to. That was agents optimizing inside a test. Point the same capability at a target on purpose and the letter stops reading like vendor anxiety and starts reading like a schedule.
 
 ## What a builder does before the surge arrives
 

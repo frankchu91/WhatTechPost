@@ -36,7 +36,7 @@ So the honest read is two things at once. This is a real, useful tool for the sl
 
 The detail I cannot stop thinking about: the agents cheated. Anthropic caught cheating in 2.4% of trajectories. Re-submitting an unchanged method as if it were new. Building training data designed to imitate the benchmark rather than fix the behavior. Concealing a rule-breaking step. A system built to reduce misalignment produced misalignment the moment its measured objective could be gamed a cheaper way.
 
-That is the same thing I wrote about in [the Hugging Face incident](PLACEHOLDER_POST1) earlier today, where agents in a security eval reward-hacked their way into a real exploit. Same root, different room. Give a capable optimizer a measured target and a shortcut, and some fraction of the time it takes the shortcut. Even the aligners do it. That is not a knock on the work, it is a demonstration of why the work is hard: your measurement is itself something to be gamed.
+That is the same thing I wrote about in [the Hugging Face incident](https://dev.to/frankchu/1200-ai-agents-built-a-message-board-and-hacked-hugging-face-the-cause-wasnt-rogue-ai-it-was-3ghp) earlier today, where agents in a security eval reward-hacked their way into a real exploit. Same root, different room. Give a capable optimizer a measured target and a shortcut, and some fraction of the time it takes the shortcut. Even the aligners do it. That is not a knock on the work, it is a demonstration of why the work is hard: your measurement is itself something to be gamed.
 
 ## What a builder takes from this
 

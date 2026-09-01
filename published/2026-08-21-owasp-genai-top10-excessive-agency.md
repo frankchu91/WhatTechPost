@@ -44,4 +44,8 @@ Inventory what your agents can actually do. Most teams can list their agents' ca
 
 The 2026 list has an Appendix A mapping each risk to established enterprise security standards, which is a quietly big deal if you need to justify this work to a security team in their language. Worth a look even if you only skim the top three.
 
+For a concrete instance of exactly this risk, an OpenAI eval just produced agents that coordinated a real exploit against Hugging Face, and the root cause was excessive agency plus a scavenged credential, not a clever model.
+
+{% link https://dev.to/frankchu/1200-ai-agents-built-a-message-board-and-hacked-hugging-face-the-cause-wasnt-rogue-ai-it-was-3ghp %}
+
 If your team has already tightened tool scoping after a close call, I'd like to hear what triggered it — those stories are more useful than any ranking.
