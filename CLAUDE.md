@@ -13,13 +13,13 @@ Two posts a day, each with a different job. This replaced the "news-only" run af
 1. **Daily AI news digest — "Today in AI" — 1/day.** A short, scannable post that tells developers the day's big AI news, plainly. NOT a deep single-topic piece: a clear 3–5 item digest of what actually happened, each item one or two sentences plus a one-line "why a builder should care." Fast read (3–5 min). Still first-hand verified (no vendor-claim relays), still non-Meta. Its stance lives in what it selects and the per-item takes, not in a single thesis.
 2. **One depth post — 1/day.** This is the piece that earns reads and follows. Rotate among:
    - **Hands-on** (the signature): "I built / I tested / I benchmarked X" with real numbers, code, and errors from this machine (M2 Pro, 32GB). Lean into it — this format charts on dev.to.
-   - **Practical / evergreen**: listicle, tutorial, tips, debugging war story. Searchable, skill-building, beginner-friendly.
+   - **Practical / evergreen** (priority format now): listicle, tutorial, tips, debugging war story. Searchable, skill-building, beginner-friendly. **Best source = our own work: real tools we built and real bugs/gotchas hit while building (the dev.to pipeline, the scripts, the router, the agents).** First-hand "here's the wall I hit and the fix" from this repo's own building is the most authentic material we have and needs no user input to be real.
    - **Discussion (提问式)**: a short post (2–4 min, `discuss` tag) that leads with the reader's situation and ends on one sharp question. Built for comments, not just reactions.
 
 **Framing rule (the core lesson, 2026-08-31):** frame every post around the reader's work, not the news. "What does this change about how YOU build" beats "Company X did Y." Same-topic data showed the discussion-framed version out-engaged the news-framed one ~30x on comments. See [[writing-lessons-openings-distribution]].
 
 - Pipeline: for the digest, scan the last 24h → gather + verify 3–5 items. For depth, scan the last 3 days → pick 1 topic → research primary sources / run real code. Draft in English → aiscan PASS → save to a per-post folder in `drafts/` → notify.
-- Human review gate: the user reviews every draft and adds personal takes; Claude then publishes via the API (`scripts/publish.py`) and archives to `published/`.
+- **Fully streamlined (2026-08-31): zero required input from the user.** Every post must be written complete and publish-ready — NO `[PERSONAL TAKE]` slots, no placeholders, nothing the user has to fill or paste. Do not build posts that depend on the user contributing a personal anecdote. Claude writes the whole thing in the builder voice, runs aiscan to PASS, generates the cover, and publishes via the API. The user should never have to write or paste anything.
 
 ## Engagement (comments) — human-in-the-loop only
 
@@ -100,7 +100,7 @@ drafts/2026-08-29-i-built-coding-agent-router/   ← one post = one folder
 1. Move the whole folder: `drafts/<slug>/ → published/<slug>/`.
 2. `git add -A && commit && push` — now the `…/main/published/<slug>/<img>.png` raw URLs resolve.
 3. Publish via API: `python3 scripts/publish.py published/<slug>/index.md --publish`. Cover and inline images load from the raw URLs automatically.
-4. Before publishing: strip REVIEW NOTES, fill any `[[PERSONAL TAKE]]`, and `node scripts/aiscan.js published/<slug>/index.md` must reach PASS.
+4. Before publishing: strip REVIEW NOTES (publish.py does this) and `node scripts/aiscan.js published/<slug>/index.md` must reach PASS. No `[PERSONAL TAKE]` placeholders anymore — posts ship complete (see streamlined rule under Cadence).
 
 ## Publishing via API
 
