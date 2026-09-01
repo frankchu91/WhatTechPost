@@ -83,6 +83,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-08-31 | dev.to API 3 walls (hands-on / real bugs) | https://dev.to/frankchu/the-devto-api-called-my-own-script-a-bot-three-walls-the-docs-skip-3nc4 |
 | 2026-08-31 | OpenAI/HF agents hacked HF (reward hacking) | https://dev.to/frankchu/1200-ai-agents-built-a-message-board-and-hacked-hugging-face-the-cause-wasnt-rogue-ai-it-was-3ghp |
 | 2026-08-31 | Anthropic Automated Alignment Researchers | https://dev.to/frankchu/anthropic-let-ai-agents-do-alignment-research-and-they-beat-the-humans-the-failures-they-cant-2044 |
 | 2026-08-31 | 100+ company AI cyberattack open letter | https://dev.to/frankchu/openai-visa-and-gm-signed-a-warning-that-ai-cyberattacks-are-months-away-the-asymmetry-is-the-335l |
