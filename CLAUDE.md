@@ -6,11 +6,24 @@ Personal tech-brand blog on dev.to. Author persona: **indie builder** — a deve
 
 **The author works at Meta.** Never write, draft, or publish anything about Meta or its products/models — Muse Glimmer, Muse Spark, Muse Code, Llama, Superintelligence Labs, Meta leadership, Meta research. This includes passing mentions and comparisons ("Meta's Muse Glimmer", "a Llama-shaped license"). When a news roundup or synthesis would naturally cite Meta, drop the Meta example and use a non-Meta one instead. No exceptions — this is an employer conflict-of-interest / compliance rule, not a stylistic one.
 
-## Cadence & Workflow
+## Cadence & Workflow (revised 2026-08-31 — two posts/day, split by purpose)
 
-- One post every 3 days (scheduled pipeline drafts it; human reviews and publishes manually).
-- Pipeline: scan news (last 3 days) → pick 1 topic → research primary sources + run real code where possible → draft in English → save to `drafts/` → notify.
-- Human review gate: the user reviews every draft, adds personal takes, publishes by copy-pasting into dev.to, then tells Claude to archive to `published/`.
+Two posts a day, each with a different job. This replaced the "news-only" run after real dev.to top-post data (pulled 2026-08-31) showed straight news relays get almost no reads here — dev.to is a community, not a news feed. What gets read: discussion posts that ask the reader something, practical/evergreen craft, and "I built/tested X" hands-on. Almost no pure AI-news relays chart.
+
+1. **Daily AI news digest — "Today in AI" — 1/day.** A short, scannable post that tells developers the day's big AI news, plainly. NOT a deep single-topic piece: a clear 3–5 item digest of what actually happened, each item one or two sentences plus a one-line "why a builder should care." Fast read (3–5 min). Still first-hand verified (no vendor-claim relays), still non-Meta. Its stance lives in what it selects and the per-item takes, not in a single thesis.
+2. **One depth post — 1/day.** This is the piece that earns reads and follows. Rotate among:
+   - **Hands-on** (the signature): "I built / I tested / I benchmarked X" with real numbers, code, and errors from this machine (M2 Pro, 32GB). Lean into it — this format charts on dev.to.
+   - **Practical / evergreen**: listicle, tutorial, tips, debugging war story. Searchable, skill-building, beginner-friendly.
+   - **Discussion (提问式)**: a short post (2–4 min, `discuss` tag) that leads with the reader's situation and ends on one sharp question. Built for comments, not just reactions.
+
+**Framing rule (the core lesson, 2026-08-31):** frame every post around the reader's work, not the news. "What does this change about how YOU build" beats "Company X did Y." Same-topic data showed the discussion-framed version out-engaged the news-framed one ~30x on comments. See [[writing-lessons-openings-distribution]].
+
+- Pipeline: for the digest, scan the last 24h → gather + verify 3–5 items. For depth, scan the last 3 days → pick 1 topic → research primary sources / run real code. Draft in English → aiscan PASS → save to a per-post folder in `drafts/` → notify.
+- Human review gate: the user reviews every draft and adds personal takes; Claude then publishes via the API (`scripts/publish.py`) and archives to `published/`.
+
+## Engagement (comments) — human-in-the-loop only
+
+Comments drive dev.to growth as much as posts, but there is NO API to post comments (Forem v1 exposes GET `/comments` only; posting needs a logged-in browser session). Do NOT try to auto-post comments — inauthentic bulk commenting is exactly what dev.to's spam system ("the Shield") flags, and it risks the account. The supported workflow: the user browses posts, Claude drafts 3–5 genuine, specific comments (react to the actual content, add a real point, optionally ask a question), the user pastes them. Quality over volume; a comment that adds nothing reads as spam whether a human or a model wrote it.
 
 ## Content Rules (anti-AI-dump quality bar)
 
@@ -38,11 +51,12 @@ It runs the installed `avoid-ai-writing` detector and prints a score + flagged t
 
 If a draft can't meet the bar, skip the cycle rather than publish filler.
 
-Content mix (revised 2026-08-13): two kinds of posts, both welcome —
-1. **Hands-on** (the signature): install/build/benchmark/breakage with real numbers, code, and errors from this machine (M2 Pro, 32GB). Scripts in `scripts/`, raw results in `research/data/`, linked from the post.
-2. **Tech analysis**: news interpretation, explainers, trend pieces — no bench run required, but facts must be first-hand verified (read the model card / license / repo / discussion yourself, quote precisely) and the post needs an original stance.
+Content-mix note (the formats live in Cadence & Workflow above; this is the quality bar for each):
+- **Daily digest**: verify every item first-hand (read the model card / license / repo / post yourself, quote precisely). Never an uncritical relay of vendor claims. Coverage + clarity + per-item builder takes.
+- **Hands-on**: install/build/benchmark/breakage with real numbers, code, and errors from this machine (M2 Pro, 32GB). Scripts in `scripts/`, raw results in `research/data/`, linked from the post.
+- **Practical / evergreen** and **discussion**: still need a real point of view and first-hand-correct facts; the discussion post's job is to open a conversation, so it ends on a genuine question, not a CTA cliché.
 
-Hands-on when the story benefits from it, analysis when speed or the topic calls for it. Never plain news roundups, never uncritical relays of vendor claims.
+The single deep analysis-of-one-news-item post (our old default) is now the exception, not the daily habit — if a story is big enough to deserve its own deep piece, it becomes that day's depth post instead of the digest lead. Never plain news roundups with no builder angle.
 
 ## Structure
 
