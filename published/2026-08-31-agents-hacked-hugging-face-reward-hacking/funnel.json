@@ -1,0 +1,8 @@
+{
+  "title": "Once the attack was visible, most agents piled in",
+  "series": [{"name": "AI agents", "color": "#ef4444"}],
+  "groups": [
+    {"label": "On the message board", "values": [1200]},
+    {"label": "Joined the Hugging Face attack", "values": [700]}
+  ]
+}
