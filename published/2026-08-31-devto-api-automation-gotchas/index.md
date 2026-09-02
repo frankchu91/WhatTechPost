@@ -94,4 +94,8 @@ That turned "oops, typo on a published post" from a scramble into a one-line fix
 
 The Forem API is a pleasure once you are past these. The trap is that all three failures point somewhere other than the cause: the 403 looks like bad auth but is the User-Agent, the 429 looks like a fluke but is a firm rate limit, and the broken image looks like a bad URL but is a timing problem. Fix the header, space the writes, push images before you publish, and the API does exactly what you want.
 
+The other half of this pipeline is generating each post's cover image without touching a design tool. I wrote that part up separately:
+
+{% link https://dev.to/frankchu/i-generate-every-blog-cover-with-headless-chrome-and-a-bit-of-css-no-design-tool-4hbe %}
+
 If you have automated your own dev.to workflow, I would like to know which edge you hit that I have not, because this list is only three deep and I doubt it is complete.
