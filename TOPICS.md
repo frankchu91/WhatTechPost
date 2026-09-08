@@ -83,6 +83,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-07 | Prompt caching = 90% discount, 3 silent breakers (hands-on) | https://dev.to/frankchu/prompt-caching-is-a-90-discount-on-your-llm-bill-and-three-habits-quietly-throw-it-away-3i8 |
 | 2026-09-03 | 5 writing tells that feel machine-made (craft) | https://dev.to/frankchu/the-5-writing-tells-that-make-a-post-feel-machine-made-and-how-i-catch-them-before-publishing-168e |
 | 2026-09-01 | Blog covers via headless Chrome + CSS (hands-on) | https://dev.to/frankchu/i-generate-every-blog-cover-with-headless-chrome-and-a-bit-of-css-no-design-tool-4hbe |
 | 2026-08-31 | dev.to API 3 walls (hands-on / real bugs) | https://dev.to/frankchu/the-devto-api-called-my-own-script-a-bot-three-walls-the-docs-skip-3nc4 |

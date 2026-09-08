@@ -67,3 +67,7 @@ If you try it, the thing I most want to hear is where the classifier misjudged a
 There is a lower-tech version of this same idea that skips the proxy entirely: run two agents, a frontier driver and a free open one, and route between them by hand. I wrote that up separately.
 
 {% link https://dev.to/frankchu/the-2026-coding-setup-isnt-one-agent-its-two-a-frontier-driver-and-a-free-open-one-26a %}
+
+And if you want the prompt-caching mechanic on its own, the reason this whole thing turns on the cache, I pulled that into a standalone piece:
+
+{% link https://dev.to/frankchu/prompt-caching-is-a-90-discount-on-your-llm-bill-and-three-habits-quietly-throw-it-away-3i8 %}
