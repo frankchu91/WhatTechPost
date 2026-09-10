@@ -1,0 +1,8 @@
+{
+  "title": "Request latency by tier (ms, lower is better)",
+  "series": [{"name": "p50", "color": "#14b8a6"}, {"name": "p99", "color": "#64748b"}],
+  "groups": [
+    {"label": "cache hit",  "values": [40, 120]},
+    {"label": "cache miss", "values": [380, 1173]}
+  ]
+}
