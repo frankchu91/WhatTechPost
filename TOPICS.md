@@ -83,6 +83,8 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-09 | Stop asking LLM for JSON, constrain it (hands-on) | https://dev.to/frankchu/stop-asking-the-model-for-json-constrain-it-lja |
+| 2026-09-08 | Charts for your README from JSON (hands-on) | https://dev.to/frankchu/charts-for-your-readme-from-a-json-spec-no-charting-library-5bgb |
 | 2026-09-07 | Prompt caching = 90% discount, 3 silent breakers (hands-on) | https://dev.to/frankchu/prompt-caching-is-a-90-discount-on-your-llm-bill-and-three-habits-quietly-throw-it-away-3i8 |
 | 2026-09-07 | Agent starts every session from zero (discussion) | https://dev.to/frankchu/every-new-session-your-ai-agent-starts-from-zero-what-do-you-actually-feed-it-to-catch-up-nkc |
 | 2026-09-03 | 5 writing tells that feel machine-made (craft) | https://dev.to/frankchu/the-5-writing-tells-that-make-a-post-feel-machine-made-and-how-i-catch-them-before-publishing-168e |

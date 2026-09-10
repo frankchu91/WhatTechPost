@@ -93,4 +93,8 @@ For a one-off hero image, open a real design tool. For images you make on every 
 
 It also pairs with the rest of an automated publishing flow. I wrote yesterday about [the walls I hit pushing posts to dev.to through its API](https://dev.to/frankchu/the-devto-api-called-my-own-script-a-bot-three-walls-the-docs-skip-3nc4); this is the piece that makes each of those posts show up with a cover without me touching a canvas.
 
+The same engine does charts, not just covers. I pulled that into its own piece: a JSON spec in, a branded bar-chart PNG out, no charting library.
+
+{% link https://dev.to/frankchu/charts-for-your-readme-from-a-json-spec-no-charting-library-5bgb %}
+
 If you generate your own social or cover images, I would like to see your template, because the design is the fun part and I am always looking to steal a better gradient.
