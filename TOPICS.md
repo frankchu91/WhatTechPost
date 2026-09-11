@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-10 | LLM retry logic (practical) | https://dev.to/frankchu/your-llm-calls-need-real-retry-logic-and-the-sdk-only-does-half-of-it-282m |
+| 2026-09-10 | 5 things to lock down before an agent (security checklist) | https://dev.to/frankchu/5-things-i-lock-down-in-a-repo-before-i-let-an-agent-loose-in-it-3195 |
+| 2026-09-10 | When is an AI PR safe to merge? (discussion) | https://dev.to/frankchu/the-pr-is-green-and-you-didnt-write-a-line-of-it-whats-your-actual-bar-for-merging-4oap |
 | 2026-09-09 | Stop asking LLM for JSON, constrain it (hands-on) | https://dev.to/frankchu/stop-asking-the-model-for-json-constrain-it-lja |
 | 2026-09-08 | Charts for your README from JSON (hands-on) | https://dev.to/frankchu/charts-for-your-readme-from-a-json-spec-no-charting-library-5bgb |
 | 2026-09-07 | Prompt caching = 90% discount, 3 silent breakers (hands-on) | https://dev.to/frankchu/prompt-caching-is-a-90-discount-on-your-llm-bill-and-three-habits-quietly-throw-it-away-3i8 |
