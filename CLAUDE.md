@@ -2,9 +2,11 @@
 
 Personal tech-brand blog on dev.to. Author persona: **indie builder** — a developer actively building AI products, writing about the latest AI news from a "what does this mean for builders" perspective.
 
-## HARD CONSTRAINT — no Meta content (author works at Meta)
+## Meta content — allowed as of 2026-09-12 (author lifted the prior ban)
 
-**The author works at Meta.** Never write, draft, or publish anything about Meta or its products/models — Muse Glimmer, Muse Spark, Muse Code, Llama, Superintelligence Labs, Meta leadership, Meta research. This includes passing mentions and comparisons ("Meta's Muse Glimmer", "a Llama-shaped license"). When a news roundup or synthesis would naturally cite Meta, drop the Meta example and use a non-Meta one instead. No exceptions — this is an employer conflict-of-interest / compliance rule, not a stylistic one.
+The prior hard ban on Meta/Muse content was **lifted by the author on 2026-09-12**; the author explicitly decided Meta employee policy is not a blocker and asked to write Muse posts. Meta/Muse content is now permitted.
+
+Residual guardrails (the only limits that remain): write only about **publicly available** Meta features and the author's own first-hand user experience. Do NOT publish anything confidential, internal, unreleased, or non-public about Meta. When in doubt on whether a detail is public, leave it out. (The author owns the employer-policy judgment; Claude's job is just to keep internal/unreleased specifics out of public posts.)
 
 ## Cadence & Workflow (revised 2026-08-31 — two posts/day, split by purpose)
 
