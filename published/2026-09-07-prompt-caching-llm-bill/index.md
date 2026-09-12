@@ -55,4 +55,8 @@ The reason to wire this into a test or a dashboard rather than eyeball it once i
 
 None of this is exotic. Keep the prefix byte-identical, put the parts that change at the end, do not switch models inside a cached thread, and read back the one usage field that proves it worked. That is close to the entire discipline, and it is the difference between paying for your repeated context once or paying for it every time.
 
+If you want to actually watch the savings, the same `usage` fields this relies on make a tiny cost logger. I wrote that up separately:
+
+{% link https://dev.to/frankchu/a-30-line-wrapper-that-tells-you-what-every-llm-call-actually-costs-509k %}
+
 If you have found a cache invalidator that took you a while to spot, I want to hear it, because they are all invisible until you know the exact shape of the one that got you.

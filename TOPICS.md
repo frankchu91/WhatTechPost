@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-11 | Context engineering: what to leave out (practical) | https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3 |
+| 2026-09-11 | 30-line LLM cost logger (hands-on) | https://dev.to/frankchu/a-30-line-wrapper-that-tells-you-what-every-llm-call-actually-costs-509k |
+| 2026-09-11 | What do you spend on AI/month? (discussion) | https://dev.to/frankchu/what-do-you-actually-spend-on-ai-per-month-and-would-you-pay-it-out-of-your-own-pocket-29m1 |
 | 2026-09-10 | LLM retry logic (practical) | https://dev.to/frankchu/your-llm-calls-need-real-retry-logic-and-the-sdk-only-does-half-of-it-282m |
 | 2026-09-10 | 5 things to lock down before an agent (security checklist) | https://dev.to/frankchu/5-things-i-lock-down-in-a-repo-before-i-let-an-agent-loose-in-it-3195 |
 | 2026-09-10 | When is an AI PR safe to merge? (discussion) | https://dev.to/frankchu/the-pr-is-green-and-you-didnt-write-a-line-of-it-whats-your-actual-bar-for-merging-4oap |
