@@ -83,6 +83,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-12 | Running my household with Muse (hands-on, Meta) | https://dev.to/frankchu/i-dont-chat-with-my-ai-assistant-i-run-my-household-with-it-1h8j |
 | 2026-09-11 | Context engineering: what to leave out (practical) | https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3 |
 | 2026-09-11 | 30-line LLM cost logger (hands-on) | https://dev.to/frankchu/a-30-line-wrapper-that-tells-you-what-every-llm-call-actually-costs-509k |
 | 2026-09-11 | What do you spend on AI/month? (discussion) | https://dev.to/frankchu/what-do-you-actually-spend-on-ai-per-month-and-would-you-pay-it-out-of-your-own-pocket-29m1 |
