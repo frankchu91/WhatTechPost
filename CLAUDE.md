@@ -36,7 +36,9 @@ Built after real data: 60 posts → 690 views / 3 reactions / 6 followers, versu
 6. **End on a real question** that invites disagreement or a story. Never "let me know / follow for more."
 7. **Scanner last.** aiscan as a floor, after the above, and it gets no vote on whether the post is worth publishing.
 
-**Daily mix (author's rule, restated and TIGHTENED 2026-09-14):** 3 posts/day; **at least one of the three must be a real technical post — actual code, actual artifacts, actual things we built or found — not prose about technique.**
+**Daily mix (author's rule, TIGHTENED AGAIN 2026-09-14):** 3 posts/day; **at least TWO of the three must be real hardcore technical posts — actual code, actual artifacts, actual things we built or found — not prose about technique.**
+
+**Hardcore posts must be self-verified, not recalled.** Every number, behavior, and claim in a technical post has to be measured or dug out in-session on this machine before it is written: run the probe, time the thing, diff the output, read the primary source. Then audit your own result — a measurement can be confidently wrong (a one-word test document once made me conclude the detector was density-based; re-running at realistic length gave the opposite answer). If a claim in a draft cannot be traced to something actually run today, cut it or go run it.
 
 This is a hard gate, not a preference. It exists because 9 of 10 consecutive published posts shipped with **zero code blocks**, including a "methodology" post, and the author called it out: 纯文字谁看. Enforce it mechanically:
 
