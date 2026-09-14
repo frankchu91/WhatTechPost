@@ -83,6 +83,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 
 | Date | Topic | Post |
 |------|-------|------|
+| 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
+| 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
+| 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
 | 2026-09-12 | Running my household with Muse (hands-on, Meta) | https://dev.to/frankchu/i-dont-chat-with-my-ai-assistant-i-run-my-household-with-it-1h8j |
 | 2026-09-11 | Context engineering: what to leave out (practical) | https://dev.to/frankchu/context-engineering-is-mostly-deciding-what-to-leave-out-1le3 |
 | 2026-09-11 | 30-line LLM cost logger (hands-on) | https://dev.to/frankchu/a-30-line-wrapper-that-tells-you-what-every-llm-call-actually-costs-509k |
