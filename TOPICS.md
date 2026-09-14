@@ -86,6 +86,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
 | 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
+| 2026-09-14 | 60 posts / 690 views autopsy (field report, v2) | https://dev.to/frankchu/60-posts-in-3-weeks-got-690-views-heres-the-autopsy-ido |
+| 2026-09-14 | 3-layer split for agent skills (methodology, v2) | https://dev.to/frankchu/the-3-layer-split-that-stopped-my-agents-skills-from-rotting-22h1 |
+| 2026-09-14 | Every attack started with a stolen key (news+stance, v2) | https://dev.to/frankchu/every-attack-in-anthropics-threat-report-started-with-a-stolen-key-35a8 |
 | 2026-09-13 | Streaming LLM responses: gotchas after token 1 (practical) | https://dev.to/frankchu/streaming-an-llm-response-is-easy-the-parts-that-bite-come-after-the-first-token-1n83 |
 | 2026-09-13 | Pre-commit hook that stops secrets (tool) | https://dev.to/frankchu/the-pre-commit-hook-that-stops-a-secret-from-ever-reaching-your-repo-2anj |
 | 2026-09-13 | Faster with AI or just busier? (discussion) | https://dev.to/frankchu/are-you-actually-faster-with-ai-or-just-busier-50pe |

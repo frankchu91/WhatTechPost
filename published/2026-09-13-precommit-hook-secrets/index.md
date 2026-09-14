@@ -61,4 +61,8 @@ A human author commits a few times an hour and roughly knows what is in each cha
 
 Ten minutes, two files, one install. The payoff is that the single most expensive mistake, a live credential in public git history, stops being possible on your machine instead of being something you clean up after.
 
+If you want the evidence for why this matters, Anthropic's September threat report is it: every major intrusion in there started with a leaked credential, and one stolen token went to full cloud admin in about three hours.
+
+{% link https://dev.to/frankchu/every-attack-in-anthropics-threat-report-started-with-a-stolen-key-35a8 %}
+
 If you run a pre-commit setup with a check I have not thought of, I want to see it, because the good ones are all learned from a near-miss someone would rather not repeat.
