@@ -37,4 +37,8 @@ The agent works on a branch and opens a pull request. It does not push to main. 
 
 None of this is exotic, and that is the point. The failure mode with autonomous agents is rarely a dramatic one. It is a leaked key in a commit nobody read, or a green PR that was wrong in a way the thin test suite could not catch. Ten minutes of boring setup moves almost all of that risk off the table, and it is the cheapest safety you will ever add.
 
+The secrets item is the one worth automating rather than remembering. I wrote up the exact pre-commit hook for it separately:
+
+{% link https://dev.to/frankchu/the-pre-commit-hook-that-stops-a-secret-from-ever-reaching-your-repo-2anj %}
+
 If you let agents work in your repos, what is on your pre-flight list that is not on mine? I am collecting the ones people learned the hard way.
