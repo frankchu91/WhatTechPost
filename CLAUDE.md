@@ -36,7 +36,17 @@ Built after real data: 60 posts → 690 views / 3 reactions / 6 followers, versu
 6. **End on a real question** that invites disagreement or a story. Never "let me know / follow for more."
 7. **Scanner last.** aiscan as a floor, after the above, and it gets no vote on whether the post is worth publishing.
 
-**Daily mix (author's rule, restated 2026-09-14):** 3 posts/day; **one of the three must be a substantive methodology summary (AI agents — including agent skills/tasks — or another domain) or a useful programming tip/trick for other devs.** The other two rotate across styles: story/field report, contrarian opinion, industry news + stance, discussion, listicle-with-stance, setup share, war story. Vary the style day to day; ten posts in one style is one post.
+**Daily mix (author's rule, restated and TIGHTENED 2026-09-14):** 3 posts/day; **at least one of the three must be a real technical post — actual code, actual artifacts, actual things we built or found — not prose about technique.**
+
+This is a hard gate, not a preference. It exists because 9 of 10 consecutive published posts shipped with **zero code blocks**, including a "methodology" post, and the author called it out: 纯文字谁看. Enforce it mechanically:
+
+```
+node scripts/techcheck.js drafts/<slug>/index.md     # exit 1 = prose, not technical
+```
+
+Requires >= 2 language-tagged code blocks and >= 12 lines of real code (REVIEW NOTES comments are stripped first, so notes never count). **The technical post of the day must exit 0 on techcheck before it is considered done.** What counts as substance: real code from `scripts/` or the actual work, a real skill/config file with its frontmatter, real command output or an error message, a real schema or spec. What does not: pseudo-code invented for the post, a bulleted "approach," or a table of concepts.
+
+The other two rotate across styles: story/field report, contrarian opinion, industry news + stance, discussion, listicle-with-stance, setup share, war story. Vary the style day to day; ten posts in one style is one post.
 
 **Distribution is part of the workflow, not an afterthought.** Reads come from reach, not craft: reply to every comment we get, comment with an actual opinion on 3–5 relevant posts/day (drafted by Claude, pasted by the author), follow people in the lane, cross-post pointers elsewhere. A great post into six followers is a great post nobody sees.
 

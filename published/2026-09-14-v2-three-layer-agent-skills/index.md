@@ -1,47 +1,118 @@
 <!--
-REVIEW NOTES (delete before publishing) — DO NOT PUBLISH until user says so.
-- v2 batch, style: METHODOLOGY (the mandatory substantive "方法论" post). First-hand from this repo: project file + skills + a verify gate (aiscan) + session context never persisted + the review-notes-comment gotcha + the "fix the skill not the output" loop.
-- Thesis: split agent instructions into 3 layers by how often they change; most rot comes from mixing them.
+REVIEW NOTES (delete before publishing)
+- v2 batch, style: METHODOLOGY + REAL CODE (the mandatory technical post). REWRITTEN 2026-09-14 after the first version shipped with zero code blocks.
+- Every code block below is real, from this repo: scripts/aiscan.js (the verify gate), the CLAUDE.md layer skeleton, real skill frontmatter, the promote-a-rule loop.
+- Thesis: split agent instructions by change-rate; each layer needs a different mechanism (short file / dated skill + verify step / never persist).
 -->
 
 ---
 title: "The 3-layer split that stopped my agent's skills from rotting"
 published: false
-description: "My agent's instructions used to be one growing file that slowly went stale. Splitting them by how often they change, plus one verify step and one feedback loop, is the setup that finally held."
+description: "My agent's instructions were one growing file that slowly went stale, and it followed the stale parts confidently. Splitting them by how often they change, and giving each layer a different mechanism, is what finally held. With the actual code."
 tags: ai, agents, programming, productivity
 cover_image: https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/2026-09-14-v2-three-layer-agent-skills/cover.png
 ---
 
-For a while my agent's instructions lived in one file, and the file only ever grew. Rules, conventions, task procedures, notes from last week, a warning from an incident, all in one place. It worked until it didn't. The tell was subtle: the agent started following instructions that were no longer true, confidently, and I could not tell at a glance which parts of the file were still real.
+Last month I caught my coding agent carefully explaining how to publish a post by copy-pasting it into a website by hand. I had scripted that months earlier. But one line in its project file still described the old manual flow, and the agent followed that line with total confidence, every session. Nothing errored. It was just politely, invisibly wrong.
 
-The fix that held was not a better file. It was splitting the instructions into three layers by one question: **how often does this change?** Mixing things that change at different rates is where almost all the rot came from.
+That is the failure mode nobody warns you about. A stale plugin crashes. A stale instruction gets **obeyed**.
+
+The fix was not a better file. It was splitting the agent's instructions into three layers by one question, **how often does this change**, and giving each layer a different mechanism. Mixing change-rates is where all my rot came from.
 
 ## Layer 1: rules that almost never change
 
-The project file. Conventions, architecture, the hard constraints, the "do not touch this, removing it breaks production" notes. This layer should be short, stable, and read on every session. If something in here changes more than once a month, it is in the wrong layer.
+A short project file the agent reads every session. Conventions, commands, hard constraints. Mine is organized by the question above, not by topic:
 
-Because it is stable, it also caches, and because it is short, the agent actually follows it instead of losing the important three rules in a wall of forty.
+```markdown
+# Project
 
-## Layer 2: skills, which are versioned procedures for a task
+## HARD CONSTRAINTS        <- changes ~never; violating these is a bug
+- Never publish anything about <employer> or its products.
+- No AI-disclosure line on posts.
 
-A skill is "how to do one specific thing": run the publish flow, generate a cover image, check a draft against the style guide. It changes when the task changes, which is more often than the rules but far less often than a session. Two properties made mine stop rotting.
+## Commands                <- changes when tooling changes
+- Check a draft:  node scripts/aiscan.js drafts/<slug>/index.md
+- Publish:        python3 scripts/publish.py published/<slug>/index.md --publish
+- Cover image:    python3 scripts/make_cover.py --kicker ... --out drafts/<slug>/cover.png
 
-First, every skill has a verify step, a real check it runs on its own output rather than trusting itself. My writing skill does not just "write in the house style," it runs a scanner over the draft and fails if the score is over the bar. The skill can be wrong; the check catches it. A skill without a verify step is an instruction the agent follows on faith.
+## Layout                  <- changes when structure changes
+- drafts/<slug>/index.md   gitignored, local only
+- published/<slug>/        tracked; raw-URL source for images
+```
 
-Second, every skill has a date. A "last verified" line at the top, updated when I confirm it still works against the current tools. When the host changes, I re-verify the skills that matter and the date tells me which ones are stale. It is a dependency with a version, treated like one.
+The rule I enforce: **if something in here changes more than once a month, it is in the wrong layer.** Short and stable means the agent actually follows it, instead of losing three real rules inside forty.
+
+## Layer 2: skills, which are dated procedures with a verify step
+
+A skill is "how to do one specific task." It changes when the task changes, which is more often than the rules and far less often than a session. Two properties stopped mine from rotting.
+
+**First: a date in the frontmatter.** A skill is a dependency, so it gets a version.
+
+```yaml
+---
+name: publish-post
+description: Move a draft to published/, push, then post via the dev.to API.
+last_verified: 2026-09-14      # re-check when the host or tooling changes
+---
+```
+
+When my tooling changes I re-verify the skills that matter, and the date tells me which ones are suspect. Without it, a skill written against a four-month-old API steers every session slightly wrong and never throws.
+
+**Second, and this is the one that matters: every skill runs a real check on its own output.** My writing skill does not say "write in the house style" and hope. It shells out to a scanner that fails the draft on a score. Here is the actual gate, `scripts/aiscan.js`:
+
+```js
+const D = require(path.join(os.homedir(),
+  '.claude/skills/avoid-ai-writing/detector/patterns.js'));
+
+const TARGET = 2.0;                       // above this = rewrite
+const text = fs.readFileSync(file, 'utf8');
+const r = D.analyzeText(text);            // { score, issues[], stats }
+
+for (const i of r.issues) {
+  console.log(`  [${i.type}] ${JSON.stringify(i.text)}  => ${i.suggestion}`);
+}
+console.log(`  VERDICT: ${r.score > TARGET ? 'REVIEW / REWRITE' : 'PASS'}`);
+
+process.exit(r.score > TARGET ? 1 : 0);   // <- the part that makes it a gate
+```
+
+That last line is the whole design. It exits non-zero, so the skill's procedure cannot continue past a failing draft. **A skill without a verify step is an instruction followed on faith.** The skill can be wrong, the check catches it.
 
 ## Layer 3: session context, which is never persisted
 
-The task in front of the agent right now. The files it is touching, the specific thing I asked for, the retrieved context. This layer changes every session and it must not leak upward. The moment a session detail gets written into a skill or the project file "for next time," rot begins, because it was true once and will be assumed true forever.
+The task in front of the agent right now: the files it is touching, what I asked for, the retrieved context. This changes every session and it must not leak upward. The moment a session detail gets written into a skill "for next time," rot starts, because it was true once and will be assumed true forever.
 
-I am strict about this now. Per-task context stays in the conversation. If something from a session turns out to be permanently true, it gets promoted deliberately, into a rule or a skill, with a date, not copied in on impulse.
+So promotion is deliberate, never a copy-paste reflex:
 
-## The feedback loop that makes the layers compound
+```
+session note  ──(true only today)──>  stays in the conversation, dies with it
+              ──(true every time)──>  promote to Layer 1 rule, or a dated Layer 2 skill
+```
 
-When the agent does something wrong, the reflex is to fix the output and move on. The habit that actually pays is to ask which layer failed. Did it violate a rule it did not know? Add the rule to layer 1. Did a skill's procedure go stale? Update the skill and its date. Did it act on a session detail as if it were permanent? That is a layer leak, so pull it back out.
+## The loop that makes it compound
 
-Over a few weeks the file stopped growing randomly and started growing on purpose. Every entry is in the layer that matches how often it changes, every skill can prove it works, and nothing from a Tuesday afternoon is silently steering every session after.
+When the agent does something wrong, the reflex is to fix the output. The habit that pays is to ask **which layer failed**, then fix that:
 
-One small, real gotcha from my own setup, since it is the kind of thing that only bites in practice: the scanner in my writing skill reads the whole draft, including a comment block where I had listed the words to avoid. It flagged the post for containing the words I was telling it to avoid. The verify step was working exactly as designed and I had put the test data inside the thing under test. Moving the list into a separate file fixed it, and I now assume every verify step sees more than I think it does.
+| What went wrong | Layer | Fix |
+|---|---|---|
+| Broke a convention it never knew | 1 | Add one line to the project file |
+| Followed an outdated procedure | 2 | Update the skill, bump `last_verified` |
+| Treated last Tuesday as permanent | 3 | Pull it back out; it was a leak |
 
-If you run agent skills, how do you keep them from going stale? I have this split and a date on each one, and I still suspect I am missing a trick that someone with more skills than me has already found.
+Fix the output and you fix it once. Fix the layer and it stops recurring.
+
+## The gotcha that proves the point
+
+My writing skill's verify step reads the **whole draft file**, including the HTML comment block at the top where I keep review notes. I had helpfully listed the words to avoid in that comment. The scanner counted them and failed the post for containing exactly the words I was telling it to avoid.
+
+```
+[tier1] "leverage"  => use
+[hollow-intensifier] "genuinely"
+VERDICT: REVIEW / REWRITE        # score 6, from a comment the reader never sees
+```
+
+The gate was working perfectly. I had put the test data inside the thing under test. The comment now says "avoid the swap-table words" and the list lives in a separate file, and I now assume every verify step sees more than I think it does.
+
+Three layers, a date on each skill, a non-zero exit somewhere, and a rule that session context never gets promoted by reflex. That is the whole system, and it is the first version that has not quietly gone stale on me.
+
+If you run agent skills: what is your verify step? I am convinced the skills without one are the ones that rot, and I want to know what other people are gating on.
