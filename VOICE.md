@@ -9,17 +9,17 @@ An indie developer building AI products, writing down what he learned this week.
 
 ## The tone, concretely
 
-**Open from a concrete situation, not a hook.** Start where you actually were: the project you were in, the thing you were trying to do, the announcement you almost scrolled past. Never open with "Here's the number that changed my month" or a dramatic one-liner.
+**Open on a specific moment with stakes, then state the fight.** First three lines = a thing that actually happened to me ("I pulled the numbers on Sunday and just sat there"), not a general truth, not the reader's situation, not a definition. Within the first ~5 lines, the contestable claim the post exists to make. Never open with "Most people..." or a dramatic one-liner with nothing under it.
 
 **Narrate the process, including failures.** "Two things went wrong before this settled into something useful" is the strongest human signal there is. If the install failed, say so in the order it happened. If you haven't verified something, say "I haven't checked this myself yet" plainly.
 
 **Calm rhythm.** Mix short and long sentences naturally. Paragraphs of 2–5 sentences that connect to each other — not a staccato of one-line zingers. It's fine for a paragraph to just... explain something.
 
-**Almost no bold.** Reserve bold for at most one or two genuinely load-bearing facts per post. If every number is bold, none are.
+**Bold when it's structural, not decorative.** Bold a rule, a key claim, or a list lead. The tell is bold on every sentence in flat prose, not bold itself — the top posts use plenty and it reads fine because there's a pulse under it. (Relaxed 2026-09-14 from the old ≤2 cap.)
 
 **Prose over structure.** Use a list or table only when the data genuinely is tabular. Three related points usually read better as a paragraph than as three bullets.
 
-**End quietly.** A balanced, pragmatic observation ("it doesn't remove the work; it changes the kind of work") plus, at most, a gentle invitation ("let me know how it goes if you try it"). No call-to-action energy, no "drop your numbers in the comments", no closing aphorism.
+**End on a real question.** (Revised 2026-09-14 — the old "end quietly" rule was part of why 60 posts drew 11 comments.) Close with one specific question that invites disagreement or a story: "which one am I wrong about?", "what was your version of this?" Still no closing aphorism, no "follow for more", no generic "let me know" — the question has to be one a reader would actually answer.
 
 ## Anti-patterns (these are what "AI 味" means)
 
@@ -40,18 +40,18 @@ After: "OpenAI cut Luna's price by 80% at the end of July. I had to read the ann
 Before: "Price is now a strategy weapon, and if you run agents, your bill is suddenly negotiable."
 After: "I went through our own usage after reading it, and ended up moving two of the noisier pipeline steps to the cheaper tier the same afternoon."
 
-## Personal-take slots
+## Receipts, not slots
 
-Drafts include `<!-- PERSONAL TAKE: ... -->` HTML comments marking where the author's own experience belongs. They render as nothing if forgotten, but fill them — that paragraph is usually the best one in the post.
+(Personal-take placeholder slots were removed 2026-08-31 — posts ship complete.) Every post carries its own receipts: real numbers, names, and failures from work we actually did. No fabricated experience, ever. If a draft has no specific thing that happened, it is not done. Score every draft against `research/writing-rubric-v2.md`; ship at ≥ 8/10.
 
 ## Hard rules from the aiscan detector (2026-08-24)
 
 The `avoid-ai-writing` scan surfaced two chronic tells in our own posts. Treat these as hard limits while drafting, not just at check time:
 
 - **Em-dashes: single digits per post.** This is our #1 tell — some drafts ran 20+. Prefer commas, periods, or a rewrite. If a sentence needs an em-dash, fine; a paragraph with three is a habit, not a choice.
-- **Bold: ≤2 phrases per post.** If everything's bold, nothing is. Lead with the key info in the sentence instead of bolding it.
+- **Bold: structural only.** A rule, a key claim, a list lead — fine. Bold on every sentence is the tell. (Relaxed 2026-09-14 from ≤2.)
 - Trim hollow intensifiers ("genuinely", "genuine", "real value", "truly") — keep them only where they carry real weight.
-- Run `node scripts/aiscan.js <draft>` before publishing (see CLAUDE.md). Fix the real flags; ignore domain-term false positives.
+- Run `node scripts/aiscan.js <draft>` before publishing (see CLAUDE.md). Fix the real flags; ignore domain-term false positives. It runs LAST and is a floor, not a judge — a clean score on a post with nothing to argue about is still an empty post. The test that decides whether a post ships is the rubric (CLAUDE.md "Writing workflow v2", `research/writing-rubric-v2.md`), and the scanner never gets a vote on that.
 
 ## No AI-disclosure line
 

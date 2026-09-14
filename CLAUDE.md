@@ -23,6 +23,23 @@ Two posts a day, each with a different job. This replaced the "news-only" run af
 - Pipeline: for the digest, scan the last 24h → gather + verify 3–5 items. For depth, scan the last 3 days → pick 1 topic → research primary sources / run real code. Draft in English → aiscan PASS → save to a per-post folder in `drafts/` → notify.
 - **Fully streamlined (2026-08-31): zero required input from the user.** Every post must be written complete and publish-ready — NO `[PERSONAL TAKE]` slots, no placeholders, nothing the user has to fill or paste. Do not build posts that depend on the user contributing a personal anecdote. Claude writes the whole thing in the builder voice, runs aiscan to PASS, and generates the cover. **Publish gate (revised 2026-09-08): Claude does NOT auto-publish. Prepare the complete draft, then stop and wait for the user's explicit go ("发" / "publish") before moving the folder, pushing, and posting via the API.** The user still never writes or pastes anything; the only thing required from them is the green light to publish.
 
+## Writing workflow v2 (2026-09-14) — the dev.to test
+
+Built after real data: 60 posts → 690 views / 3 reactions / 6 followers, versus top posts at 100–186 reactions. Craft was not the variable; reads did not correlate with effort. Full rubric with scoring: `research/writing-rubric-v2.md`. Every draft is scored 0–10 before it is called done; ship at ≥ 8, rewrite below.
+
+**Order of operations (do these in this order, not the reverse):**
+1. **Thesis first.** Write the one line someone would argue with. If nobody could disagree, there is no post — pick another topic. "Correct, balanced advice" scores zero here.
+2. **Open on a moment.** First 3 lines = a specific thing that happened to me, with stakes. Never "Most people…", never the reader's generic situation, never a definition.
+3. **Receipts.** Real numbers, names, failures, from work we actually did. "690 views." "$0.12 vs $1.23." "Score 9, REVIEW." No fabricated experience, ever — every "I did X" must be something this repo/work really did.
+4. **One human beat.** Self-deprecation, a flash of feeling, an aside. Vary sentence length. Do not sand every sentence to the same weight — that is how "not-machine" became "not-anyone."
+5. **Punch title.** One clause, a claim or a question, ~10 words. Not "Title. Subclause that explains."
+6. **End on a real question** that invites disagreement or a story. Never "let me know / follow for more."
+7. **Scanner last.** aiscan as a floor, after the above, and it gets no vote on whether the post is worth publishing.
+
+**Daily mix (author's rule, restated 2026-09-14):** 3 posts/day; **one of the three must be a substantive methodology summary (AI agents — including agent skills/tasks — or another domain) or a useful programming tip/trick for other devs.** The other two rotate across styles: story/field report, contrarian opinion, industry news + stance, discussion, listicle-with-stance, setup share, war story. Vary the style day to day; ten posts in one style is one post.
+
+**Distribution is part of the workflow, not an afterthought.** Reads come from reach, not craft: reply to every comment we get, comment with an actual opinion on 3–5 relevant posts/day (drafted by Claude, pasted by the author), follow people in the lane, cross-post pointers elsewhere. A great post into six followers is a great post nobody sees.
+
 ## Engagement (comments) — human-in-the-loop only
 
 Comments drive dev.to growth as much as posts, but there is NO API to post comments (Forem v1 exposes GET `/comments` only; posting needs a logged-in browser session). Do NOT try to auto-post comments — inauthentic bulk commenting is exactly what dev.to's spam system ("the Shield") flags, and it risks the account. The supported workflow: the user browses posts, Claude drafts 3–5 genuine, specific comments (react to the actual content, add a real point, optionally ask a question), the user pastes them. Quality over volume; a comment that adds nothing reads as spam whether a human or a model wrote it.
@@ -47,7 +64,7 @@ node scripts/aiscan.js drafts/<file>.md
 It runs the installed `avoid-ai-writing` detector and prints a score + flagged tells with a PASS / REVIEW verdict (exit 1 = REVIEW).
 
 - **Score > 2 (REVIEW): fix and re-scan before publishing.** Don't publish a REVIEW draft.
-- **Always fix the real, consistent tells**, even on a PASS: em-dash overuse (keep to single digits per post) and bold overuse (≤2 bold phrases per post). These are our two chronic habits; the scan catches them every time.
+- **Always fix the real, consistent tells**, even on a PASS: em-dash overuse (keep to single digits per post) and the chronic filler words (the swap-table set: the verb that means "use," hollow intensifiers, "load-bearing," "comprehensive," etc. — do not list them in a draft's comment; the scanner reads comments). Bold is allowed when it is structural (a rule, a key claim, a list lead); the real tell is bold on every sentence in otherwise flat prose. The scanner is the LAST check and a floor, never a judge of whether a post is worth publishing (see Writing workflow v2).
 - **Use judgment on false positives** — it flags domain terms ("harness", "leverage-as-a-noun") and sometimes legitimate emphasis ("genuine"). Fix real ones; don't chase the number by mangling correct writing. The tool itself says: signal, not verdict.
 - Run it after writing/rewriting and again after any edit. A rewrite to lower the score must not introduce factual drift.
 
