@@ -86,6 +86,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
 | 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
+| 2026-09-15 | 9 of 10 posts had zero code, so I wrote a gate (HARDCORE) | https://dev.to/frankchu/i-measured-my-last-10-posts-9-had-zero-code-blocks-so-i-wrote-a-gate-2b3c |
+| 2026-09-15 | Chrome boot cost, 3.6x via parallel Popen (HARDCORE) | https://dev.to/frankchu/every-image-my-blog-generates-cost-23-seconds-of-chrome-boot-six-of-them-cost-14-1joh |
+| 2026-09-15 | Delete every AI subscription (discussion) | https://dev.to/frankchu/if-you-deleted-every-ai-subscription-tomorrow-what-would-actually-break-58da |
 | 2026-09-14 | Probed my linter 16 ways (HARDCORE) | https://dev.to/frankchu/i-probed-my-own-ai-writing-linter-16-ways-the-first-probe-lied-to-me-58if |
 | 2026-09-14 | Chart generator 70px dead space (HARDCORE) | https://dev.to/frankchu/my-chart-generator-quietly-padded-every-image-with-up-to-70px-of-dead-space-4ib8 |
 | 2026-09-14 | Agent skills are plugins (opinion) | https://dev.to/frankchu/agent-skills-are-plugins-with-a-new-name-3i5k |
