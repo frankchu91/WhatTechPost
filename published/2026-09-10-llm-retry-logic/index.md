@@ -29,7 +29,7 @@ Split errors into two piles. Retryable: 429 rate limits, 529 overloads, 500-clas
 
 ## Cap the wall clock, not just the attempts
 
-A subtle trap: timeouts are themselves retried, so "3 retries" with a 60-second timeout can mean three minutes of a user waiting on one call. Bound the total time, not only the attempt count. Add jitter to the backoff so a fleet of workers that all failed at once does not retry in lockstep and hammer the provider at the same instant.
+A subtle trap: timeouts are themselves retried, so "3 retries" with a 60-second timeout can mean three minutes of a user waiting on one call. Worse, your loop multiplies with the client's own retries. The official clients ship a default of 2 retries, up to 3 HTTP attempts per call, each with its own backoff, so an outer `attempts=4` on top of that is a worst case of twelve requests for one logical call. Pick a single owner: set the client's `max_retries=0` and own the loop, or drop the loop and raise the client's numbers. Bound the total time, not only the attempt count. Add jitter to the backoff so a fleet of workers that all failed at once does not retry in lockstep and hammer the provider at the same instant.
 
 ```python
 import random, time
@@ -44,11 +44,32 @@ def call_with_retry(make_request, attempts=4, cap_seconds=45):
         except HttpError as e:
             if e.status not in RETRYABLE or i == attempts - 1:
                 raise
-            if time.monotonic() - start > cap_seconds:
+            backoff   = min(2 ** i, 8) + random.uniform(0, 0.5)   # backoff + jitter
+            wait      = max(parse_retry_after(e), backoff)        # never shorter than backoff
+            remaining = cap_seconds - (time.monotonic() - start)
+            if wait > remaining:        # decide BEFORE sleeping, not after
                 raise
-            wait = min(2 ** i, 8) + random.uniform(0, 0.5)  # backoff + jitter
-            time.sleep(e.retry_after or wait)               # honor Retry-After
+            time.sleep(wait)
 ```
+
+**Correction (2026-09-17).** The version that first shipped here checked the budget
+*before* the sleep but never compared it to how long the sleep would be, so a single
+`Retry-After: 120` blew straight through a 45-second cap and only aborted on the next
+iteration, after the time was already spent. [@pm25coder](https://dev.to/pm25coder)
+caught it in the comments and posted a reproduction; I reran it with a stubbed clock
+and got the same numbers:
+
+```
+cap_seconds=45, first failure 429 with Retry-After: 120  ->  returned after 120.0s, 2 attempts
+cap_seconds=2,  no Retry-After                           ->  returned after 3.0s
+```
+
+Two more things they were right about, now fixed above. `e.retry_after or wait`
+silently discards the backoff whenever the server *does* send a header, so it needs
+`max(retry_after, backoff)`; and `Retry-After` can be an HTTP-date rather than a
+number of seconds, which is why the header goes through a parser here instead of
+being used raw. If you would rather spend the tail of the budget than give up on it,
+`time.sleep(min(wait, remaining))` is the other reasonable choice.
 
 ## The two failures people forget
 
