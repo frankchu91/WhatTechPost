@@ -11,6 +11,7 @@ title: "dev.to stores your front matter twice, and a body edit can rewrite your 
 published: false
 description: "The API keeps your YAML inside body_markdown and also parses it into real fields. I checked a live post to see which one wins, because PUT replaces the whole body and I wanted to know what else it replaces."
 tags: python, api, webdev, programming
+cover_image: https://raw.githubusercontent.com/frankchu91/WhatTechPost/main/published/2026-09-18-two-sources-of-truth-frontmatter/cover.png
 ---
 
 I script my publishing to dev.to, and edits go up as a `PUT` that replaces `body_markdown` wholesale. Before trusting that with anything important I wanted to know one thing: when I replace the body, what else am I replacing?

@@ -86,6 +86,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
 | 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
+| 2026-09-18 | Score 1 to 17 from front matter alone (HARDCORE) | https://dev.to/frankchu/my-writing-score-went-from-1-to-17-without-touching-a-word-of-the-article-103b |
+| 2026-09-18 | dev.to stores front matter twice (HARDCORE) | https://dev.to/frankchu/devto-stores-your-front-matter-twice-and-a-body-edit-can-rewrite-your-title-1pd9 |
+| 2026-09-18 | Obeying a rule nothing enforces (discussion) | https://dev.to/frankchu/how-long-would-you-obey-a-rule-your-tooling-never-actually-enforced-37fe |
 | 2026-09-17 | Two dead constants in my linter (HARDCORE) | https://dev.to/frankchu/two-constants-in-my-linter-were-dead-i-obeyed-them-for-three-weeks-5f25 |
 | 2026-09-17 | Three checkers, one scope bug (HARDCORE) | https://dev.to/frankchu/three-checkers-i-wrote-one-bug-none-of-them-can-tell-a-mention-from-a-use-1a48 |
 | 2026-09-17 | Agent rules file is 3000 tokens of archaeology (discussion) | https://dev.to/frankchu/your-agents-rules-file-is-3000-tokens-and-half-of-it-is-archaeology-2gfb |
