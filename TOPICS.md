@@ -88,6 +88,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
 | 2026-09-17 | Two dead constants in my linter (HARDCORE) | https://dev.to/frankchu/two-constants-in-my-linter-were-dead-i-obeyed-them-for-three-weeks-5f25 |
 | 2026-09-17 | Three checkers, one scope bug (HARDCORE) | https://dev.to/frankchu/three-checkers-i-wrote-one-bug-none-of-them-can-tell-a-mention-from-a-use-1a48 |
+| 2026-09-17 | Agent rules file is 3000 tokens of archaeology (discussion) | https://dev.to/frankchu/your-agents-rules-file-is-3000-tokens-and-half-of-it-is-archaeology-2gfb |
 | 2026-09-16 | PUT can edit a published post (HARDCORE) | https://dev.to/frankchu/the-devto-api-can-edit-a-published-post-the-quickstart-never-says-so-71c |
 | 2026-09-16 | Scanned 68 posts, 3 reactions (HARDCORE) | https://dev.to/frankchu/i-scanned-my-whole-archive-63-of-68-posts-passed-the-archive-has-3-reactions-3254 |
 | 2026-09-16 | Dumbest confidently-wrong AI (discussion) | https://dev.to/frankchu/whats-the-dumbest-thing-your-ai-confidently-got-wrong-this-week-49ip |
