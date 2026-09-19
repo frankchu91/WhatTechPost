@@ -54,6 +54,44 @@ The other two rotate across styles: story/field report, contrarian opinion, indu
 
 **Distribution is part of the workflow, not an afterthought.** Reads come from reach, not craft: reply to every comment we get, comment with an actual opinion on 3–5 relevant posts/day (drafted by Claude, pasted by the author), follow people in the lane, cross-post pointers elsewhere. A great post into six followers is a great post nobody sees.
 
+## Workflow: `comment` (author says "comment" / "帮我找帖子" / "给我评论")
+
+Find dev.to posts worth replying to and hand the author ready-to-paste comments.
+
+```
+python3 scripts/comment.py          # candidates, ranked by comment activity
+python3 scripts/comment.py --read <url>   # full body + existing comments, to draft against
+python3 scripts/comment.py --mine         # unanswered comments on OUR posts (do these first)
+```
+
+**Output contract — this is the whole format, and it is strict:**
+
+```
+<url>
+
+<English comment>
+
+<url>
+
+<English comment>
+```
+
+URL, then the comment, repeated. **Nothing else.** No "why I picked this one," no ranking
+commentary, no Chinese explanation around them, no strategy notes, no closing summary.
+The author pastes these directly; anything else is noise they have to read past.
+
+Rules for the comments themselves:
+- Always read the post body first (`--read`). A comment written off a title reads as spam.
+- Be specific to what the post actually says: quote or name the exact point being answered.
+- Bring a real number or a real failure from our own work when it fits. Never invent one.
+- End on a genuine question the author would want to answer.
+- **No links to our own posts.** First contact with a link reads as self-promotion.
+- Don't repeat a point an existing commenter already made (the `--read` output lists them).
+- Skip DEV staff/meta threads ("What was your win this week") — generic prompts, no conversation.
+
+There is still no API to post comments (Forem v1 exposes GET `/comments` only), and
+auto-posting would trip dev.to's spam system. Claude drafts, the author pastes.
+
 ## Engagement (comments) — human-in-the-loop only
 
 Comments drive dev.to growth as much as posts, but there is NO API to post comments (Forem v1 exposes GET `/comments` only; posting needs a logged-in browser session). Do NOT try to auto-post comments — inauthentic bulk commenting is exactly what dev.to's spam system ("the Shield") flags, and it risks the account. The supported workflow: the user browses posts, Claude drafts 3–5 genuine, specific comments (react to the actual content, add a real point, optionally ask a question), the user pastes them. Quality over volume; a comment that adds nothing reads as spam whether a human or a model wrote it.
