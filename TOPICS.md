@@ -86,6 +86,9 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
 | 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
+| 2026-09-19 | CDN discards retina covers (HARDCORE) | https://dev.to/frankchu/a-commenter-told-me-to-render-retina-covers-i-measured-what-the-cdn-does-with-them-3o9c |
+| 2026-09-19 | Two image transforms, opposite rules (HARDCORE) | https://dev.to/frankchu/same-platform-two-image-transforms-opposite-rules-for-how-to-author-them-4bf |
+| 2026-09-19 | Best comment proved my code wrong (discussion) | https://dev.to/frankchu/the-best-comment-i-ever-got-was-someone-proving-my-code-wrong-40kg |
 | 2026-09-18 | Score 1 to 17 from front matter alone (HARDCORE) | https://dev.to/frankchu/my-writing-score-went-from-1-to-17-without-touching-a-word-of-the-article-103b |
 | 2026-09-18 | dev.to stores front matter twice (HARDCORE) | https://dev.to/frankchu/devto-stores-your-front-matter-twice-and-a-body-edit-can-rewrite-your-title-1pd9 |
 | 2026-09-18 | Obeying a rule nothing enforces (discussion) | https://dev.to/frankchu/how-long-would-you-obey-a-rule-your-tooling-never-actually-enforced-37fe |
