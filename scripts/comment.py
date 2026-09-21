@@ -16,18 +16,32 @@ and small active posts beat big ones because the author actually shows up.
 import json
 import re
 import sys
+import time
+import urllib.error
 import urllib.request
 
 UA = "WhatTechPost/1.0 (+https://github.com/frankchu91/WhatTechPost)"
 
 
-def api(url, auth=False):
+def api(url, auth=False, _last=[0.0]):
+    """GET with a floor on request spacing; dev.to 429s a tight loop."""
     h = {"User-Agent": UA, "Accept": "application/json"}
     if auth:
         sys.path.insert(0, "scripts")
         from publish import load_api_key
         h["api-key"] = load_api_key()
-    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=h)))
+    for attempt in range(4):
+        gap = time.monotonic() - _last[0]
+        if gap < 1.2:                      # throttle before we get throttled
+            time.sleep(1.2 - gap)
+        _last[0] = time.monotonic()
+        try:
+            return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=h)))
+        except urllib.error.HTTPError as e:
+            if e.code == 429 and attempt < 3:
+                time.sleep(20 * (attempt + 1))   # back off, then retry
+                continue
+            raise
 
 
 def strip_html(h):
