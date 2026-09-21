@@ -86,6 +86,7 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-09-12 | Treat your prompts like code (practical) | https://dev.to/frankchu/treat-your-prompts-like-code-version-them-test-them-review-them-5cei |
 | 2026-09-12 | Test LLM code without flaky tests (practical) | https://dev.to/frankchu/how-to-test-code-that-calls-an-llm-without-writing-flaky-tests-h0o |
 | 2026-09-12 | Docs or just ask the model? (discussion) | https://dev.to/frankchu/do-you-still-read-the-docs-or-do-you-just-ask-the-model-now-olf |
+| 2026-09-20 | Jev guide from the SDK source (HARDCORE) | https://dev.to/frankchu/reading-the-jev-sdk-source-instead-of-the-launch-post-2ke9 |
 | 2026-09-20 | Verifying Jev without a key (HARDCORE) | https://dev.to/frankchu/everyone-is-quoting-jevs-benchmarks-heres-what-you-can-check-without-a-key-59dg |
 | 2026-09-19 | CDN discards retina covers (HARDCORE) | https://dev.to/frankchu/a-commenter-told-me-to-render-retina-covers-i-measured-what-the-cdn-does-with-them-3o9c |
 | 2026-09-19 | Two image transforms, opposite rules (HARDCORE) | https://dev.to/frankchu/same-platform-two-image-transforms-opposite-rules-for-how-to-author-them-4bf |
