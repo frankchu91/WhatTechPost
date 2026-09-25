@@ -202,3 +202,8 @@ Open production issues surfaced by this work (NOT yet fixed on dev.to):
 - 2 live duplicate articles: ids 4532492/4532387 (DeepSeek), 4532489/4532381 (OpenHands)
 - 4 files in published/ that were never published: 2026-08-07 nvidia-nooa, 2026-08-13 qwen-followup,
   2026-08-19 stripe-openrouter, 2026-08-21 anthropic-model-2
+
+### Published 2026-09-24 (3/3)
+- https://dev.to/frankchu/if-a-list-endpoint-returns-exactly-as-many-rows-as-you-asked-for-you-have-a-bug-21kb (id 4738079, HARDCORE)
+- https://dev.to/frankchu/i-published-a-benchmark-two-weeks-later-the-same-code-ran-25x-faster-1fa5 (id 4738082, HARDCORE)
+- https://dev.to/frankchu/my-linters-have-never-found-a-real-bug-in-my-posts-readers-have-found-two-ad1 (id 4738084, discussion)
