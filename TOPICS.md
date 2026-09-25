@@ -177,3 +177,28 @@ Verified this cycle (research/2026-08-12 + 2026-08-13 scans):
 | 2026-08-25 | Meta Muse Spark 1.2 license unpublished | https://dev.to/frankchu/meta-says-itll-open-the-weights-for-its-flagship-the-license-line-is-still-blank-4fnl |
 
 Pre-project posts (own): Karpathy LLM wiki implementation (2026-07-21), AI-maintained wiki on free local model (2026-08-08).
+
+## Drafted 2026-09-24 for 9/24–9/28 (15 posts, NOT published — awaiting "发")
+
+Every hardcore post below is backed by a measurement run in-session on 2026-09-24.
+
+9/24  HARDCORE  count == page size (per_page probe; true total 92, no count field in response)
+9/24  HARDCORE  benchmark retraction (published 2.3s, re-measured 0.93s, load average 70.59)
+9/24  discuss   linters check form, readers check truth (2 reader-found defects)
+9/25  HARDCORE  Server header names the layer (Varnish vs Heroku; case-sensitive `urllib` blocklist)
+9/25  HARDCORE  Retry-After: 0 -> 187 req/s hot loop (measured against a local stub)
+9/25  discuss   five checkers, one bug: mention vs use
+9/26  HARDCORE  `published:` flag wrong in 87 of 91 files (in-memory re.sub never hits disk)
+9/26  HARDCORE  74% of published python blocks reference undefined names (AST free-name walk)
+9/26  practical five response details I read before the status code
+9/27  HARDCORE  linter beaten by writing more (same 9 em dashes: score 9 @78w, 3 @648w)
+9/27  HARDCORE  dev.to crops covers (8 proxy transforms, dims parsed from WebP headers)
+9/27  discuss   how long do you keep a published claim provisional
+9/28  HARDCORE  published the same two posts twice, unnoticed 24 days (no idempotency key)
+9/28  HARDCORE  six checkers merged into audit.py; found a real bug and committed one
+9/28  discuss   which check in your pipeline has never fired
+
+Open production issues surfaced by this work (NOT yet fixed on dev.to):
+- 2 live duplicate articles: ids 4532492/4532387 (DeepSeek), 4532489/4532381 (OpenHands)
+- 4 files in published/ that were never published: 2026-08-07 nvidia-nooa, 2026-08-13 qwen-followup,
+  2026-08-19 stripe-openrouter, 2026-08-21 anthropic-model-2

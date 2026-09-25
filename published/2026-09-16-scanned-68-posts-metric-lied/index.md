@@ -51,6 +51,7 @@ That is a healthy-looking distribution. Tight cluster at 1, a long thin tail, fi
 Then I pulled engagement for the same 68 posts from the platform API.
 
 ```python
+# BUG — see the correction below. per_page caps the response and this never paginates.
 mine = get("https://dev.to/api/articles/me/published?per_page=60", auth=True)
 tot_v = sum(a.get("page_views_count", 0) for a in mine)
 tot_r = sum(a.get("public_reactions_count", 0) for a in mine)
@@ -60,6 +61,31 @@ print(f"{len(mine)} posts | {tot_v} views | {tot_r} reactions")
 ```
 60 posts | 690 views | 3 reactions
 ```
+
+**Correction (2026-09-22).** That call is wrong and the output contains its own tell:
+it returned *exactly* 60, the number I asked for. `per_page` is a page size, not a
+limit, and I never paginated, so the engagement figures above cover 60 posts while the
+quality scan above them covers 68. I compared two different populations and presented
+them as one archive. [@obole](https://dev.to/obole) caught the mismatch in the comments.
+
+The correct version walks the pages:
+
+```python
+def all_published():
+    out, page = [], 1
+    while True:
+        batch = get(f"https://dev.to/api/articles/me/published?per_page=100&page={page}",
+                    auth=True)
+        if not batch:
+            return out
+        out += batch
+        page += 1
+```
+
+Any time a count comes back equal to the page size you requested, assume truncation
+until you have checked. The argument of the post is unchanged — the score still does not
+track engagement — but the specific numbers paired the wrong two sets, and the fix is a
+loop I should have written the first time.
 
 Sixty-eight posts scoring a mean of 1.25 on the quality gate. Three reactions between all of them.
 

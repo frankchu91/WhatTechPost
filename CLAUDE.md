@@ -105,6 +105,17 @@ Every post MUST have:
 
 (No AI-assistance disclosure line — removed 2026-08-19 by the author's decision. Do NOT add one to new posts. Already-published posts keep whatever they shipped with; don't retrofit.)
 
+## Archive audit — `scripts/audit.py` (added 2026-09-24)
+
+```
+python3 scripts/audit.py                       # published/ + drafts/, exit 1 on any ERROR
+python3 scripts/audit.py drafts/<slug>/index.md
+```
+
+One script holding every check this repo learned the hard way. It replaced six scripts that each had their own idea of what "a post" is; `slice_post()` now decides once and returns `notes` / `front` / `body` separately, and each check names the region it reads. Checks: missing stdlib imports in Python blocks (AST free-name walk), untagged fences, cover is exactly 1000x420 (dev.to serves covers through `fit=cover`, so off-ratio is a silent crop), no local `published: true` flag, em-dash density over the body only, and a `reconcile()` that talks to the API.
+
+**Run it before any publish batch.** `reconcile()` counts *articles*, not titles — that is what caught two posts that had been live in duplicate since 8/31 under different URLs, invisible for 24 days to every per-file check. A block whose first line is a comment naming a source file (`# scripts/publish.py, ...`) is treated as an excerpt and reports WARN instead of ERROR, so quoting real source never has to be falsified to satisfy the gate.
+
 ## AI-writing check (mandatory pre-publish step, added 2026-08-24)
 
 Every draft must pass the AI-writing scan before it publishes:
@@ -114,6 +125,8 @@ node scripts/aiscan.js drafts/<file>.md
 ```
 
 It runs the installed `avoid-ai-writing` detector and prints a score + flagged tells with a PASS / REVIEW verdict (exit 1 = REVIEW).
+
+**Scoping fix (2026-09-24).** aiscan used to hand the detector the whole file. It now scores only the body, with REVIEW NOTES, front matter, and the contents of all code blocks stripped, and scores `title` + `description` separately as a metadata region that fails the post on its own. Why, all measured: a title change with a byte-identical body moved the score 0 → 42; front-matter words padded the em-dash denominator enough to flip one published post's verdict (whole file score 2 PASS vs body-only score 3 REVIEW, **identical issue lists**); and `struct.unpack` inside a Python snippet was flagged as the English word "unpack". Note the 10-word floor in the detector (`if (wordCount < 10)`) — scoring a title alone is structurally incapable of firing, which is why title and description are scored together. **A draft comment must still never list tell-words** — notes are stripped now, but don't rely on it.
 
 - **Score > 2 (REVIEW): fix and re-scan before publishing.** Don't publish a REVIEW draft.
 - **Always fix the real, consistent tells**, even on a PASS: em-dash overuse (keep to single digits per post) and the chronic filler words (the swap-table set: the verb that means "use," hollow intensifiers, "load-bearing," "comprehensive," etc. — do not list them in a draft's comment; the scanner reads comments). Bold is allowed when it is structural (a rule, a key claim, a list lead); the real tell is bold on every sentence in otherwise flat prose. The scanner is the LAST check and a floor, never a judge of whether a post is worth publishing (see Writing workflow v2).
