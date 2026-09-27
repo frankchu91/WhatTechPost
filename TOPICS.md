@@ -207,3 +207,11 @@ Open production issues surfaced by this work (NOT yet fixed on dev.to):
 - https://dev.to/frankchu/if-a-list-endpoint-returns-exactly-as-many-rows-as-you-asked-for-you-have-a-bug-21kb (id 4738079, HARDCORE)
 - https://dev.to/frankchu/i-published-a-benchmark-two-weeks-later-the-same-code-ran-25x-faster-1fa5 (id 4738082, HARDCORE)
 - https://dev.to/frankchu/my-linters-have-never-found-a-real-bug-in-my-posts-readers-have-found-two-ad1 (id 4738084, discussion)
+
+### Published 2026-09-26 (3/3) — all figures re-measured on the day, not reused from the 9/24 drafts
+- https://dev.to/frankchu/i-have-the-same-boolean-in-94-files-it-is-wrong-in-90-of-them-54dd (id 4753156, HARDCORE)
+- https://dev.to/frankchu/77-of-the-python-i-published-references-names-it-never-defines-2db2 (id 4753159, HARDCORE)
+- https://dev.to/frankchu/five-things-i-read-in-an-http-response-before-i-read-the-status-code-mpk (id 4753163, practical)
+
+NOTE: 9/25's three drafts were never published (no go was given that day) and are still queued.
+Their numbers are now stale for the same reason 9/26's were — re-measure before shipping them.
