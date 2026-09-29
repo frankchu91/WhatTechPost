@@ -215,3 +215,13 @@ Open production issues surfaced by this work (NOT yet fixed on dev.to):
 
 NOTE: 9/25's three drafts were never published (no go was given that day) and are still queued.
 Their numbers are now stale for the same reason 9/26's were — re-measure before shipping them.
+
+### Published 2026-09-29 (the queued 9/25 batch, shipped 4 days late after re-verification)
+- https://dev.to/frankchu/the-server-header-told-me-which-layer-rejected-my-request-and-it-wasnt-the-one-i-was-debugging-151k (id 4773428, HARDCORE)
+- https://dev.to/frankchu/a-server-sent-me-retry-after-0-and-my-retry-loop-lost-its-brakes-41gb (id 4773436, HARDCORE)
+- https://dev.to/frankchu/every-checker-i-wrote-this-month-had-the-same-bug-it-could-not-tell-using-a-word-from-talking-2in9 (id 4773441, discussion)
+
+Lesson logged: a queued draft's numbers expire. The retry post's 187 req/s was a load artifact
+(load avg 70 on 9/24); the same code measured 332-3896 req/s today. Fix was to publish the RANGE
+plus conditions and drop the number from the title, not to swap in a fresher single figure.
+Re-verify every measured claim on the day a draft actually ships.
