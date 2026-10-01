@@ -225,3 +225,12 @@ Lesson logged: a queued draft's numbers expire. The retry post's 187 req/s was a
 (load avg 70 on 9/24); the same code measured 332-3896 req/s today. Fix was to publish the RANGE
 plus conditions and drop the number from the title, not to swap in a fresher single figure.
 Re-verify every measured claim on the day a draft actually ships.
+
+### Published 2026-09-30 (the queued 9/27 batch, shipped 3 days late after re-verification)
+- https://dev.to/frankchu/my-writing-linter-can-be-defeated-by-writing-more-i-measured-how-much-more-31j6 (id 4780034, HARDCORE)
+- https://dev.to/frankchu/devto-re-encodes-and-crops-your-cover-image-and-i-measured-exactly-where-the-crop-lands-43gk (id 4780038, HARDCORE)
+- https://dev.to/frankchu/how-long-do-you-keep-a-published-claim-provisional-3ghk (id 4780039, discussion)
+
+Re-verification caught a DIFFERENT class of staleness this time: not a wrong number, but a code
+block showing a two-family gate that was never built. Lesson: re-verify the CODE in a queued draft
+against what actually shipped, not just the numbers. A draft can go stale by the repo moving on.
