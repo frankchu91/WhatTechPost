@@ -234,3 +234,26 @@ Re-verify every measured claim on the day a draft actually ships.
 Re-verification caught a DIFFERENT class of staleness this time: not a wrong number, but a code
 block showing a two-family gate that was never built. Lesson: re-verify the CODE in a queued draft
 against what actually shipped, not just the numbers. A draft can go stale by the repo moving on.
+
+### Published 2026-10-04 (the queued 9/28 batch — 15-post batch now fully shipped)
+- https://dev.to/frankchu/i-published-the-same-two-posts-twice-and-didnt-notice-for-a-month-b6j (id 4797294, HARDCORE)
+- https://dev.to/frankchu/i-merged-six-checkers-into-one-script-it-found-a-real-bug-and-committed-one-on-the-same-run-15eh (id 4797296, HARDCORE)
+- https://dev.to/frankchu/which-check-in-your-pipeline-has-never-fired-p7c (id 4797298, discussion)
+
+## QUEUE IS EMPTY — next "发" needs a fresh batch drafted first.
+
+Re-verification lessons from shipping these 15 across 10 days (all three kinds bit at least once):
+1. NUMBERS expire — archive counts, per_page totals, timing figures. Re-measure on ship day.
+2. CODE expires — a draft showed a gate design that was never built; the repo moved on.
+3. DURATIONS expire fastest — "didn't notice for 24 days" became 34. Keep elapsed time out of
+   titles, or expect to rewrite them.
+Also: when a defect count DROPS between runs, account for where it went. 16 -> 7 missing imports
+looked like archive cleanup; it was actually the gate catching 9 in drafts pre-publication. A check
+that stops firing is indistinguishable from a problem that stopped happening.
+
+### Still open (not fixed, needs a decision)
+- 2 live duplicate articles, 34+ days: DeepSeek ids 4532387/4532492, OpenHands ids 4532381/4532489.
+  Views split evenly (20/20, 10/10), both copies 0 reactions / 0 comments. No DELETE in Forem API v1
+  — removing one needs a browser session. Now publicly documented in post 4797294.
+- 4 files in published/ never published: 2026-08-07 nvidia-nooa, 2026-08-13 qwen-followup,
+  2026-08-19 stripe-openrouter, 2026-08-21 anthropic-model-2.
