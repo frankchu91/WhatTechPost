@@ -5,7 +5,7 @@ Each check here exists because something it would have caught got published.
 Usage:  python3 scripts/audit.py [path ...]   (default: published/ and drafts/)
 Exit 1 if any ERROR-level finding is reported. WARN findings never fail the run.
 """
-import ast, builtins, glob, json, os, re, sys, urllib.parse, urllib.request
+import ast, builtins, glob, json, os, re, sys, time, urllib.error, urllib.parse, urllib.request
 
 FENCE = re.compile(r"^```([a-zA-Z0-9+_-]*)[^\n]*\n(.*?)^```", re.S | re.M)
 LEAD_COMMENT = re.compile(r"\A\s*<!--.*?-->\s*", re.S)
@@ -134,7 +134,13 @@ CHECKS = [check_missing_imports, check_untagged_fences, check_notes_not_leaked,
 
 
 def reconcile(paths):
-    """The archive-wide check: does published/ agree with the API?"""
+    """The archive-wide check: does published/ agree with the API?
+
+    --local skips this entirely. Added because the reachability spot-check makes
+    every run cost ~15s of network, which is fine once and useless when you are
+    running the file-level checks eight times in a row against mutated input."""
+    if "--local" in sys.argv:
+        return ["info  reconcile skipped (--local)"]
     key = os.environ.get("DEVTO_API_KEY") or _key_from_env_file()
     if not key:
         return ["WARN  reconcile skipped: no DEVTO_API_KEY"]
@@ -151,6 +157,29 @@ def reconcile(paths):
         page += 1
     live = {a["title"] for a in arts}
     out = []
+
+    # me/published is a listing, not proof of reachability.
+    #
+    # Found 2026-10-06 with a scratch article: unpublish it, then republish it,
+    # and you get a row that me/published and me/all both report as published
+    # while GET /articles/{id} and the public page both return 404. Stable for
+    # minutes, not eventual consistency. reconcile() built its live set from
+    # that listing, so it counted a post readers cannot open as live.
+    #
+    # Spot-check reachability instead of trusting the list. Full verification is
+    # one request per article, so sample unless asked for everything.
+    sample = arts if os.environ.get("AUDIT_FULL") else arts[:12]
+    for a in sample:
+        try:
+            urllib.request.urlopen(urllib.request.Request(
+                f"https://dev.to/api/articles/{a['id']}",
+                headers={**UA, "api-key": key,
+                         "Accept": "application/vnd.forem.api-v1+json"}), timeout=20)
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                out.append(f"ERROR ghost: {a['id']} listed as published but GET 404s "
+                           f"({a['title'][:44]})")
+        time.sleep(1.2)
 
     # Count articles, not titles. Publishing has no idempotency key, so a
     # re-run of a partially failed batch silently creates a second copy.
@@ -180,7 +209,7 @@ def reconcile(paths):
         m = re.search(r'(?m)^title:\s*"?(.*?)"?\s*$', slice_post(raw)["front"])
         if m and m.group(1) not in live:
             out.append(f"ERROR {p}: in published/ but not live on dev.to")
-    out.append(f"info  {len(live)} posts live on the API")
+    out.append(f"info  {len(arts)} articles listed, {len(live)} distinct titles, {len(sample)} reachability-checked")
     return out
 
 
@@ -194,7 +223,7 @@ def _key_from_env_file():
 
 
 def main():
-    args = sys.argv[1:] or sorted(
+    args = [a for a in sys.argv[1:] if not a.startswith("--")] or sorted(
         glob.glob("published/*.md") + glob.glob("published/*/index.md")
         + glob.glob("drafts/*/index.md"))
     errors = warns = 0

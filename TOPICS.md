@@ -257,3 +257,39 @@ that stops firing is indistinguishable from a problem that stopped happening.
   — removing one needs a browser session. Now publicly documented in post 4797294.
 - 4 files in published/ never published: 2026-08-07 nvidia-nooa, 2026-08-13 qwen-followup,
   2026-08-19 stripe-openrouter, 2026-08-21 anthropic-model-2.
+
+## Drafted 2026-10-06 for 10/07–10/10 (12 posts, NOT published — awaiting "发")
+
+Queue was empty; all material below was measured in-session on 2026-10-06.
+Three of the twelve exist only because readers commented on the previous batch.
+
+10/07 HARDCORE  @danorie asked if a word-count floor fixes the linter — measured: no (different bug)
+10/07 HARDCORE  PUT published:false unpublishes; no DELETE endpoint (HTML 404)
+10/07 discuss   @mist_ilands: shelf life is the wrong instrument; conceded
+10/08 HARDCORE  the ghost row: unpublish→republish, 2 endpoints say live, 2 say 404, stable 3min+
+10/08 HARDCORE  my own reconcile() trusted a listing and counted the ghost as live — fixed
+10/08 discuss   @michael_lands: two sentinels, 34h, zero fires AND never ran
+10/09 HARDCORE  naive 8.1-vs-23.9 view comparison reverses to 0.86-vs-0.53/day; zero age overlap
+10/09 HARDCORE  reading_time ≈ ceil(words/275), 92%, and the fit is a 255–290 plateau not a constant
+10/09 discuss   15 posts / 122 views / 1 reaction / 3 comments — the 3 did all the work
+10/10 HARDCORE  slug = first ~95 chars of the title; 3–4 char random suffix; temp-slug before publish
+10/10 HARDCORE  every tag rule + exact 422 messages; duplicates are the ONE silent rule
+10/10 HARDCORE  mutation-tested both gates: 16 mutants, incl. 2 that must stay green
+
+### Tooling changed this session (all shipped, all measured)
+- aiscan.js: verdict SPLIT into phrase / density / metadata families, each failing independently.
+  Density now parses the ratio out of the issue text instead of reusing r.score (the aggregate) —
+  using the aggregate as "the density score" would rebuild the bug under a name that hid it.
+  New gate over 106 published posts: 62% PASS / 37% REVIEW (the old one passed nearly everything).
+- aiscan.js: `aiscan_allow:` front-matter escape hatch for homographs ("underscores" the noun,
+  "unpack" the function). Hand-written, echoed in output, verified NOT a blanket bypass.
+- audit.py: reconcile() spot-checks reachability (GET /articles/{id}) instead of trusting
+  me/published; reports "N listed, M titles, K checked" instead of asserting "N live".
+  AUDIT_FULL=1 checks all; `--local` skips reconcile (the network check costs ~15s/run).
+
+### Still open
+- 2 live duplicates (DeepSeek 4532387/4532492, OpenHands 4532381/4532489), 34+ days.
+  NOW FIXABLE via PUT published:false — but the republish path produces a ghost, so treat it as
+  ONE-WAY. Needs a decision before running it on live content.
+- 4 files in published/ never published (2026-08-07, 08-13, 08-19, 08-21).
+- 1 unpublished scratch probe on the account (id 4809758), harmless, left unpublished.
