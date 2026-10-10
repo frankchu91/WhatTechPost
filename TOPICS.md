@@ -293,3 +293,25 @@ Three of the twelve exist only because readers commented on the previous batch.
   ONE-WAY. Needs a decision before running it on live content.
 - 4 files in published/ never published (2026-08-07, 08-13, 08-19, 08-21).
 - 1 unpublished scratch probe on the account (id 4809758), harmless, left unpublished.
+
+### Published 2026-10-09 (the queued 10/07 batch, re-verified on the day)
+- https://dev.to/frankchu/a-reader-asked-if-a-word-count-floor-would-fix-my-linter-i-measured-it-and-it-fixes-a-different-5hid (id 4826623, HARDCORE)
+- https://dev.to/frankchu/devtos-api-has-no-delete-it-has-put-publishedfalse-which-the-docs-never-mention-3j3i (id 4826626, HARDCORE)
+- https://dev.to/frankchu/i-proposed-a-shelf-life-for-published-claims-a-reader-showed-me-i-was-measuring-the-wrong-variable-560o (id 4826628, discussion)
+
+Re-verification found nothing stale: archive word counts, the 66/40 gate split, DELETE's HTML 404,
+GET-404-on-own-unpublished, and 8 followers all reproduced exactly.
+
+NEW ANOMALY, unexplained — article 4826623:
+  GET /api/articles/4826623                    -> 404, persistent (re-checked to ~15 min)
+  GET /api/articles/frankchu/<slug>            -> 200, same id in the payload
+  public page                                  -> 200, 91KB, content present
+  me/published                                 -> lists it
+Readers are unaffected. Not slug length: other articles with 95/96/98-char stems all answer by id,
+and only this one of 110 fails. Only this article, only the by-id route.
+
+CONSEQUENCE: audit.py's reachability check used GET by id and false-positived on it (1 of 110).
+Switched to GET /api/articles{path}, the route that corresponds to a URL a reader can follow.
+Re-ran AUDIT_FULL over all 110: false positive gone, only the 2 known duplicates remain.
+Lesson: by-id is not a reachability oracle on this API. The check I shipped three days ago to stop
+trusting a listing was itself trusting the wrong endpoint.

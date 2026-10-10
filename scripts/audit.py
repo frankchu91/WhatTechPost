@@ -168,17 +168,27 @@ def reconcile(paths):
     #
     # Spot-check reachability instead of trusting the list. Full verification is
     # one request per article, so sample unless asked for everything.
+    # Check by PATH, not by id.
+    #
+    # The first version used GET /articles/{id} and immediately false-positived on
+    # a freshly published post (4826623, 2026-10-10): by-id 404s persistently for
+    # over a minute while GET /articles/{user}/{slug} returns 200, the public page
+    # returns 200, and me/published lists it. Not slug length — other articles with
+    # 95, 96 and 98-char stems all answer by id. Unexplained, and enough to retire
+    # by-id as a reachability oracle: the path endpoint is the one that corresponds
+    # to a URL a reader can actually follow.
     sample = arts if os.environ.get("AUDIT_FULL") else arts[:12]
     for a in sample:
+        path = a.get("path") or f"/{a['user']['username']}/{a['slug']}"
         try:
             urllib.request.urlopen(urllib.request.Request(
-                f"https://dev.to/api/articles/{a['id']}",
+                f"https://dev.to/api/articles{path}",
                 headers={**UA, "api-key": key,
                          "Accept": "application/vnd.forem.api-v1+json"}), timeout=20)
         except urllib.error.HTTPError as e:
             if e.code == 404:
-                out.append(f"ERROR ghost: {a['id']} listed as published but GET 404s "
-                           f"({a['title'][:44]})")
+                out.append(f"ERROR ghost: {a['id']} listed as published but "
+                           f"{path} 404s ({a['title'][:40]})")
         time.sleep(1.2)
 
     # Count articles, not titles. Publishing has no idempotency key, so a
